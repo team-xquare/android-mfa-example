@@ -150,7 +150,6 @@ obj/
 .idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/navEditor.xml
-!*/.idea/icon.svg
 
 # Legacy Eclipse project files
 .classpath
