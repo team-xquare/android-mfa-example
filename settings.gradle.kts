@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         google()
@@ -13,5 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "XQUARE Android v2"
+rootProject.name = "xquare-android-v2"
+
 include(":app")
