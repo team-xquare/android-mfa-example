@@ -17,6 +17,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "XQUARE Android v2"
 
-include(":app")
-
-include(":core:core-network")
+include(
+    ":app",
+    ":core:core-network",
+)
