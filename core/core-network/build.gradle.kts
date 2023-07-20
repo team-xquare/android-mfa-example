@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.network"
+    namespace = "com.xquare.core_network"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig { minSdk = ProjectConfig.Sdk.MINIMUM_SDK }

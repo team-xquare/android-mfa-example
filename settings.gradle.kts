@@ -1,8 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core:network")
-
-
 pluginManagement {
     repositories {
         google()
@@ -21,3 +18,5 @@ dependencyResolutionManagement {
 rootProject.name = "XQUARE Android v2"
 
 include(":app")
+
+include(":core:core-network")
