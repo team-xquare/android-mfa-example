@@ -26,4 +26,11 @@ object Libraries {
         const val NAVIGATION = "androidx.navigation:navigation-fragment-ktx:$VERSION_NAVIGATION"
         const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$VERSION_NAVIGATION"
     }
+
+    object Retrofit {
+        private const val VERSION_RETROFIT = "2.9.0"
+
+        const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION_RETROFIT"
+        const val CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:$VERSION_RETROFIT"
+    }
 }
