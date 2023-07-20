@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "xquare-android-v2"
+rootProject.name = "XQUARE Android v2"
 
 include(":app")
