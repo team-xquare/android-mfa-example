@@ -19,5 +19,6 @@ rootProject.name = "XQUARE Android v2"
 
 include(
     ":app",
+    ":core:core-database",
     ":core:core-network",
 )
