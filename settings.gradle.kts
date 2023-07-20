@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":core:network")
+
+
 pluginManagement {
     repositories {
         google()
