@@ -33,4 +33,16 @@ object Libraries {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION_RETROFIT"
         const val CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:$VERSION_RETROFIT"
     }
+
+    object Koin {
+        private const val VERSION_KOIN = "3.4.2"
+        private const val VERSION_KOIN_COMPOSE_ANDROID = "3.4.5"
+
+        const val KOIN = "io.insert-koin:koin-android:$VERSION_KOIN"
+        const val KOIN_NAVIGATION = "io.insert-koin:koin-androidx-navigation:$VERSION_KOIN"
+        const val KOIN_COMPOSE_ANDROID =
+            "io.insert-koin:koin-androidx-compose:$VERSION_KOIN_COMPOSE_ANDROID"
+        const val KOIN_COMPOSE_ANDROID_NAVIGATION =
+            "io.insert-koin:koin-androidx-compose-navigation:$VERSION_KOIN_COMPOSE_ANDROID"
+    }
 }
