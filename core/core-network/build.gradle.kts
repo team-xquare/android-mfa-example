@@ -2,6 +2,7 @@ plugins {
     id(
         Plugins.LIBRARY_ANDROID,
         Plugins.KOTLIN_ANDROID,
+        Plugins.KAPT,
     )
 }
 
@@ -12,7 +13,7 @@ android {
     defaultConfig { minSdk = ProjectConfig.Sdk.MINIMUM_SDK }
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
