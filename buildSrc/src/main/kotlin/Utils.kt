@@ -13,3 +13,7 @@ fun org.gradle.api.artifacts.dsl.DependencyHandler.testImplementation(vararg dep
 fun org.gradle.api.artifacts.dsl.DependencyHandler.kapt(vararg dependencies: String) {
     dependencies.forEach { dependency -> add("kapt", dependency) }
 }
+
+fun org.gradle.plugin.use.PluginDependenciesSpec.id(vararg ids: String) {
+    ids.forEach { id -> this.id(id) }
+}
