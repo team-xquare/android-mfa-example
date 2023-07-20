@@ -30,5 +30,8 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
+        Libraries.Retrofit.RETROFIT,
+        Libraries.Retrofit.CONVERTER_GSON,
+        Libraries.Koin.KOIN,
     )
 }
