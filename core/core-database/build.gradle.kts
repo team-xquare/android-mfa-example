@@ -32,5 +32,9 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Room.ROOM,
+    )
+    kapt(
+        Libraries.Room.ROOM_COMPILER,
     )
 }

@@ -45,4 +45,11 @@ object Libraries {
         const val KOIN_COMPOSE_ANDROID_NAVIGATION =
             "io.insert-koin:koin-androidx-compose-navigation:$VERSION_KOIN_COMPOSE_ANDROID"
     }
+
+    object Room {
+        private const val VERSION_ROOM = "2.5.2"
+
+        const val ROOM = "androidx.room:room-ktx:$VERSION_ROOM"
+        const val ROOM_COMPILER = "androidx.room:room-ktx:$VERSION_ROOM"
+    }
 }
