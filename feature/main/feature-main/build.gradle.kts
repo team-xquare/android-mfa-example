@@ -2,6 +2,7 @@ plugins {
     id(
         Plugins.LIBRARY_ANDROID,
         Plugins.KOTLIN_ANDROID,
+        Plugins.KAPT,
     )
 }
 

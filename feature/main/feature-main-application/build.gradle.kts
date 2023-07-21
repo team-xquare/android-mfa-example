@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.feature_main_schedule"
+    namespace = "com.xquare.feature_main_application"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
@@ -35,6 +35,5 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
-        Libraries.Xds.XDS,
     )
 }
