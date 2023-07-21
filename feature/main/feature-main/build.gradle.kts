@@ -34,6 +34,7 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
+        Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
     )
