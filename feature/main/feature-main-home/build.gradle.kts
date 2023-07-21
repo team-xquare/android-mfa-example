@@ -10,7 +10,10 @@ android {
     namespace = "com.xquare.feature_main_home"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
-    defaultConfig { minSdk = ProjectConfig.Sdk.MINIMUM_SDK }
+    defaultConfig {
+        minSdk = ProjectConfig.Sdk.MINIMUM_SDK
+        consumerProguardFiles("consumer-rules.pro")
+    }
     buildTypes {
         release {
             isMinifyEnabled = true
