@@ -24,4 +24,5 @@ include(
     ":core:core-network",
     ":feature:main:feature-main",
     ":feature:main:feature-main-home",
+    ":feature:main:feature-main-schedule",
 )
