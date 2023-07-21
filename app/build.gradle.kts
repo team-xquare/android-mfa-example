@@ -42,5 +42,6 @@ dependencies {
         Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
+        Libraries.Xds.XDS,
     )
 }

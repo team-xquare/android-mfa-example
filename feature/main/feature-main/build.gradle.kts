@@ -30,5 +30,7 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
+        Libraries.Navigation.NAVIGATION,
+        Libraries.Navigation.NAVIGATION_UI,
     )
 }

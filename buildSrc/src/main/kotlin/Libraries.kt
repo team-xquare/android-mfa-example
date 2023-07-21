@@ -52,4 +52,11 @@ object Libraries {
         const val ROOM = "androidx.room:room-ktx:$VERSION_ROOM"
         const val ROOM_COMPILER = "androidx.room:room-ktx:$VERSION_ROOM"
     }
+
+    object Xds {
+        private const val VERSION_XDS = "f313df2507"
+
+        const val XDS =
+            "com.github.team-xquare.xquare-design-system-android:xds-design-system-android:$VERSION_XDS"
+    }
 }
