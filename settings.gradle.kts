@@ -21,4 +21,5 @@ include(
     ":app",
     ":core:core-database",
     ":core:core-network",
+    ":feature:home:feature-home",
 )
