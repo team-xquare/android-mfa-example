@@ -25,6 +25,7 @@ include(
     ":feature:main:feature-main",
     ":feature:main:feature-main-all",
     ":feature:main:feature-main-application",
+    ":feature:main:feature-main-feed",
     ":feature:main:feature-main-home",
     ":feature:main:feature-main-schedule",
 )
