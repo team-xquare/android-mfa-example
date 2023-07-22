@@ -23,6 +23,7 @@ include(
     ":core:core-database",
     ":core:core-network",
     ":feature:main:feature-main",
+    ":feature:main:feature-main-all",
     ":feature:main:feature-main-application",
     ":feature:main:feature-main-home",
     ":feature:main:feature-main-schedule",
