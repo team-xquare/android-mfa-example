@@ -1,1 +1,1 @@
-package com.xquare.featuremainapplication.data
+package com.xquare.featuremain.data

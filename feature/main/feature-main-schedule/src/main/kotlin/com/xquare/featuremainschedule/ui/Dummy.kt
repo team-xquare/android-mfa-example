@@ -1,1 +1,1 @@
-package com.xquare.featuremainapplication.ui
+package com.xquare.featuremainschedule.ui
