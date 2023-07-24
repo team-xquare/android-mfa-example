@@ -54,9 +54,9 @@ object Libraries {
     }
 
     object Xds {
-        private const val VERSION_XDS = "f313df2507"
+        private const val VERSION_XDS = "v0.2.0"
 
         const val XDS =
-            "com.github.team-xquare.xquare-design-system-android:xds-design-system-android:$VERSION_XDS"
+            "com.github.team-xquare:xquare-design-system-android:$VERSION_XDS"
     }
 }
