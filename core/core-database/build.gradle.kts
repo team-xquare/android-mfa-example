@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.core_database"
+    namespace = "com.xquare.core.database"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

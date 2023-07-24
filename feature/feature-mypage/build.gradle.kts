@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.feature.onboarding"
+    namespace = "app.junsu.feature.mypage"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

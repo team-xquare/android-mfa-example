@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.core_network"
+    namespace = "com.xquare.core.network"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

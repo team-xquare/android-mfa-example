@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xqaure.feature_main_feed"
+    namespace = "com.xqaure.feature.main.feed"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
