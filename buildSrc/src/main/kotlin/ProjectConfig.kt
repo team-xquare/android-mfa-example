@@ -9,8 +9,8 @@ object ProjectConfig {
     }
 
     object AppVersion {
-        const val VERSION_CODE = 2_0_0
-        const val VERSION_NAME = "2.0.0"
+        const val VERSION_CODE = 2_0_0_0_1
+        const val VERSION_NAME = "v2.0.0-alpha1"
     }
 
     object CompileOptions {
