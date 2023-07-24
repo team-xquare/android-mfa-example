@@ -8,14 +8,14 @@ plugins {
 
 android {
     namespace = "com.xquare.androidv2"
-    compileSdk = ProjectConfig.Sdk.COMPILE_SDK
+    compileSdk = AndroidConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.xquare.androidv2"
-        minSdk = ProjectConfig.Sdk.MINIMUM_SDK
-        targetSdk = ProjectConfig.Sdk.TARGET_SDK
-        versionCode = ProjectConfig.AppVersion.VERSION_CODE
-        versionName = ProjectConfig.AppVersion.VERSION_NAME
+        minSdk = AndroidConfig.Sdk.MINIMUM_SDK
+        targetSdk = AndroidConfig.Sdk.TARGET_SDK
+        versionCode = AndroidConfig.AppVersion.VERSION_CODE
+        versionName = AndroidConfig.AppVersion.VERSION_NAME
     }
     buildTypes {
         release {
@@ -27,10 +27,10 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = ProjectConfig.CompileOptions.SOURCE_COMPATIBILITY
-        targetCompatibility = ProjectConfig.CompileOptions.TARGET_COMPATIBILITY
+        sourceCompatibility = AndroidConfig.CompileOptions.SOURCE_COMPATIBILITY
+        targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
-    kotlinOptions { jvmTarget = ProjectConfig.KotlinOptions.JVM_TARGET }
+    kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
     buildFeatures { dataBinding = true }
 }
 

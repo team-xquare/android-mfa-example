@@ -1,6 +1,6 @@
 import org.gradle.api.JavaVersion
 
-object ProjectConfig {
+object AndroidConfig {
 
     object Sdk {
         const val COMPILE_SDK = 33

@@ -8,10 +8,10 @@ plugins {
 
 android {
     namespace = "com.xquare.core.common"
-    compileSdk = ProjectConfig.Sdk.COMPILE_SDK
+    compileSdk = AndroidConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
-        minSdk = ProjectConfig.Sdk.MINIMUM_SDK
+        minSdk = AndroidConfig.Sdk.MINIMUM_SDK
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -25,10 +25,10 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = ProjectConfig.CompileOptions.SOURCE_COMPATIBILITY
-        targetCompatibility = ProjectConfig.CompileOptions.TARGET_COMPATIBILITY
+        sourceCompatibility = AndroidConfig.CompileOptions.SOURCE_COMPATIBILITY
+        targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
-    kotlinOptions { jvmTarget = ProjectConfig.KotlinOptions.JVM_TARGET }
+    kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
 }
 
 dependencies {
