@@ -1,8 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core:core-common")
-
-
 pluginManagement {
     repositories {
         google()
@@ -23,6 +20,7 @@ rootProject.name = "XQUARE Android v2"
 
 include(
     ":app",
+    ":core:core-common",
     ":core:core-data",
     ":core:core-database",
     ":core:core-network",
