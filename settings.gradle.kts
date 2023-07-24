@@ -23,6 +23,7 @@ include(
     ":core:core-data",
     ":core:core-database",
     ":core:core-network",
+    ":feature:feature-onboarding",
     ":feature:main:feature-main",
     ":feature:main:feature-main-all",
     ":feature:main:feature-main-application",
