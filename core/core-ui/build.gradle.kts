@@ -28,6 +28,10 @@ android {
         targetCompatibility = ProjectConfig.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions { jvmTarget = ProjectConfig.KotlinOptions.JVM_TARGET }
+    buildFeatures {
+        viewBinding = true
+        compose = true
+    }
 }
 
 dependencies {
@@ -35,6 +39,12 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Koin.KOIN_COMPOSE,
         Libraries.Xds.XDS,
+        Libraries.Compose.COMPOSE,
+        Libraries.Compose.COMPOSE_ANIMATION,
+        Libraries.Compose.COMPOSE_TOOLING,
+        Libraries.Lifecycle.VIEWMODEL,
+        Libraries.Lifecycle.VIEWMODEL_COMPOSE,
     )
 }
