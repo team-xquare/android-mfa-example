@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.feature.signin"
+    namespace = "com.xquare.feature.signin"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

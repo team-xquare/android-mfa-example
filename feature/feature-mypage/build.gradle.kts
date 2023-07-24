@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.feature.mypage"
+    namespace = "com.xquare.feature.mypage"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

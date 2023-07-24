@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.core.data"
+    namespace = "com.xquare.core.data"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
