@@ -23,6 +23,7 @@ include(
     ":core:core-data",
     ":core:core-database",
     ":core:core-network",
+    ":core:core-ui",
     ":feature:feature-allservices",
     ":feature:feature-application",
     ":feature:feature-feed",
