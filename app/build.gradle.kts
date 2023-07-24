@@ -1,24 +1,22 @@
 plugins {
-    // todo
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id(
+        Plugins.APPLICATION,
+        Plugins.KOTLIN_ANDROID,
+        Plugins.KAPT,
+    )
 }
 
 android {
     namespace = "com.xquare.androidv2"
-    compileSdk = 33
+    compileSdk = AndroidConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.xquare.androidv2"
-        minSdk = 23
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = AndroidConfig.Sdk.MINIMUM_SDK
+        targetSdk = AndroidConfig.Sdk.TARGET_SDK
+        versionCode = AndroidConfig.AppVersion.VERSION_CODE
+        versionName = AndroidConfig.AppVersion.VERSION_NAME
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -29,19 +27,21 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = AndroidConfig.CompileOptions.SOURCE_COMPATIBILITY
+        targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
-    kotlinOptions { jvmTarget = "17" }
+    kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
     buildFeatures { dataBinding = true }
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation(
+        Libraries.Android.CORE,
+        Libraries.Android.APPCOMPAT,
+        Libraries.Material.MATERIAL,
+        Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
+        Libraries.Navigation.NAVIGATION,
+        Libraries.Navigation.NAVIGATION_UI,
+        Libraries.Xds.XDS,
+    )
 }
