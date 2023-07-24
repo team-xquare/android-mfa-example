@@ -7,14 +7,13 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.feature.main.application"
+    namespace = "com.xquare.feature.home"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
         minSdk = ProjectConfig.Sdk.MINIMUM_SDK
         consumerProguardFiles("consumer-rules.pro")
     }
-
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -35,7 +34,6 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
-        Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Xds.XDS,
     )
 }

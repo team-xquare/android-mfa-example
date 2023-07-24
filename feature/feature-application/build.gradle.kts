@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.feature.main.all"
+    namespace = "com.xquare.feature.application"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

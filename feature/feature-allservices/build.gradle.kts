@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.junsu.feature.main.schedule"
+    namespace = "com.xquare.feature.allservices"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {

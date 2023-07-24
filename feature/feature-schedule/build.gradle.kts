@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xqaure.feature.main.feed"
+    namespace = "app.junsu.feature.schedule"
     compileSdk = ProjectConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
