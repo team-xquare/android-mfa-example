@@ -24,6 +24,7 @@ include(
     ":core:core-database",
     ":core:core-network",
     ":feature:feature-mypage",
+    ":feature:feature-signin",
     ":feature:main:feature-main",
     ":feature:main:feature-main-all",
     ":feature:main:feature-main-application",
