@@ -48,6 +48,8 @@ dependencies {
         Libraries.Navigation.NAVIGATION_UI,
         Libraries.Xds.XDS,
     )
+
+    // todo implement function receives vararg params
     implementation(project(":core:core-common"))
     implementation(project(":core:core-data"))
     implementation(project(":core:core-database"))
