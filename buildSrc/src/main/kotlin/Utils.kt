@@ -1,9 +1,14 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.api.initialization.dsl.ScriptHandler.CLASSPATH_CONFIGURATION
+import org.gradle.kotlin.dsl.project
 import org.gradle.plugin.use.PluginDependenciesSpec
 
 fun DependencyHandler.implementation(vararg dependencies: String) {
     dependencies.forEach { dependency -> add("implementation", dependency) }
+}
+
+fun DependencyHandler.projectImplementation(vararg projectPaths: String) {
+    projectPaths.forEach { projectPath -> project(path = projectPath) }
 }
 
 fun DependencyHandler.androidTestImplementation(vararg dependencies: String) {

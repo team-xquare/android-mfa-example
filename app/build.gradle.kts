@@ -38,10 +38,24 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
-        Libraries.Material.MATERIAL,
+        Libraries.Koin.KOIN,
         Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
         Libraries.Xds.XDS,
+    )
+    projectImplementation(
+        ":core:core-common",
+        ":core:core-data",
+        ":core:core-database",
+        ":core:core-network",
+        ":core:core-ui",
+        ":feature:feature-allservices",
+        ":feature:feature-application",
+        ":feature:feature-feed",
+        ":feature:feature-home",
+        ":feature:feature-mypage",
+        ":feature:feature-schedule",
+        ":feature:feature-signin",
     )
 }
