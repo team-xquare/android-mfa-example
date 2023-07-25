@@ -31,7 +31,10 @@ android {
         targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
-    buildFeatures { dataBinding = true }
+    buildFeatures {
+        dataBinding = true
+        compose = true
+    }
 }
 
 dependencies {
@@ -45,18 +48,16 @@ dependencies {
         Libraries.Navigation.NAVIGATION_UI,
         Libraries.Xds.XDS,
     )
-    projectImplementation(
-        ":core:core-common",
-        ":core:core-data",
-        ":core:core-database",
-        ":core:core-network",
-        ":core:core-ui",
-        ":feature:feature-allservices",
-        ":feature:feature-application",
-        ":feature:feature-feed",
-        ":feature:feature-home",
-        ":feature:feature-mypage",
-        ":feature:feature-schedule",
-        ":feature:feature-signin",
-    )
+    implementation(project(":core:core-common"))
+    implementation(project(":core:core-data"))
+    implementation(project(":core:core-database"))
+    implementation(project(":core:core-network"))
+    implementation(project(":core:core-ui"))
+    implementation(project(":feature:feature-allservices"))
+    implementation(project(":feature:feature-application"))
+    implementation(project(":feature:feature-feed"))
+    implementation(project(":feature:feature-home"))
+    implementation(project(":feature:feature-mypage"))
+    implementation(project(":feature:feature-schedule"))
+    implementation(project(":feature:feature-signin"))
 }
