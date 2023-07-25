@@ -39,6 +39,7 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Lifecycle.VIEWMODEL,
         Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
