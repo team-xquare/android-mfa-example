@@ -38,4 +38,5 @@ dependencies {
         Libraries.Retrofit.CONVERTER_GSON,
         Libraries.Koin.KOIN,
     )
+    implementation(project(":core:core-model"))
 }
