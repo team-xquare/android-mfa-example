@@ -36,6 +36,7 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
         Libraries.Room.ROOM,
+        Libraries.Kotlin.DATETIME,
     )
     kapt(
         Libraries.Room.ROOM_COMPILER,
