@@ -63,7 +63,7 @@ internal interface MealDao {
         """
             DELETE FROM tbl_meal
             WHERE date = :date;
-        """
+        """,
     )
     fun deleteByDate(date: Instant)
 }
