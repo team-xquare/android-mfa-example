@@ -1,4 +1,4 @@
-package com.xquare.core.data.model
+package com.xquare.core.model
 
 import kotlinx.datetime.Instant
 
