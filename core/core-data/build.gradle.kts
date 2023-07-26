@@ -36,5 +36,7 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Kotlin.DATETIME,
     )
+    implementation(project(":core:core-model"))
 }
