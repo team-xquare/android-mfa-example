@@ -4,6 +4,7 @@ import com.xquare.androidv2.MainActivityViewModel
 import com.xquare.core.common.di.commonModule
 import com.xquare.core.data.di.dataModule
 import com.xquare.core.database.di.databaseModule
+import com.xquare.core.datastore.di.dataStoreModule
 import com.xquare.core.network.di.networkModule
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
@@ -20,6 +21,7 @@ val coreModule = module {
         commonModule,
         dataModule,
         databaseModule,
+        dataStoreModule,
         networkModule,
     )
 }
