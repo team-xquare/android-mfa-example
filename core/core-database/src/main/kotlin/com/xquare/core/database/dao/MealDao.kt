@@ -66,4 +66,12 @@ internal interface MealDao {
         """,
     )
     fun deleteByDate(date: Instant)
+
+    @Transaction
+    @Query(
+        """
+            DELETE FROM tbl_meal;
+        """,
+    )
+    fun deleteAll()
 }
