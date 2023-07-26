@@ -36,7 +36,9 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
         Libraries.Room.ROOM,
+        Libraries.Kotlin.DATETIME,
     )
+    implementation(project(":core:core-model"))
     kapt(
         Libraries.Room.ROOM_COMPILER,
     )

@@ -82,4 +82,10 @@ object Libraries {
         const val VIEWMODEL_COMPOSE =
             "androidx.lifecycle:lifecycle-viewmodel-compose:$VERSION_LIFECYCLE"
     }
+
+    object Kotlin {
+        private const val VERSION_DATETIME = "0.4.0"
+
+        const val DATETIME = "org.jetbrains.kotlinx:kotlinx-datetime:$VERSION_DATETIME"
+    }
 }
