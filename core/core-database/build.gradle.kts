@@ -38,6 +38,7 @@ dependencies {
         Libraries.Room.ROOM,
         Libraries.Kotlin.DATETIME,
     )
+    implementation(project(":core:core-model"))
     kapt(
         Libraries.Room.ROOM_COMPILER,
     )
