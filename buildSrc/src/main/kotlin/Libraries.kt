@@ -62,8 +62,7 @@ object Libraries {
     object Xds {
         private const val VERSION_XDS = "v0.2.0"
 
-        const val XDS =
-            "com.github.team-xquare:xquare-design-system-android:$VERSION_XDS"
+        const val XDS = "com.github.team-xquare:xquare-design-system-android:$VERSION_XDS"
     }
 
     object Compose {
@@ -77,8 +76,7 @@ object Libraries {
     object Lifecycle {
         private const val VERSION_LIFECYCLE = "2.6.1"
 
-        const val VIEWMODEL =
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:$VERSION_LIFECYCLE"
+        const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$VERSION_LIFECYCLE"
         const val VIEWMODEL_COMPOSE =
             "androidx.lifecycle:lifecycle-viewmodel-compose:$VERSION_LIFECYCLE"
     }
@@ -87,5 +85,12 @@ object Libraries {
         private const val VERSION_DATETIME = "0.4.0"
 
         const val DATETIME = "org.jetbrains.kotlinx:kotlinx-datetime:$VERSION_DATETIME"
+    }
+
+    object Datastore {
+        private const val VERSION_DATASTORE = "1.0.0"
+
+        const val DATASTORE_PREFERENCES =
+            "androidx.datastore:datastore-preferences:$VERSION_DATASTORE"
     }
 }

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.core.network"
+    namespace = "com.xquare.core.datastore"
     compileSdk = AndroidConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
@@ -34,9 +34,9 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
-        Libraries.Retrofit.RETROFIT,
-        Libraries.Retrofit.CONVERTER_GSON,
         Libraries.Koin.KOIN,
+        Libraries.Datastore.DATASTORE_PREFERENCES,
+        Libraries.Kotlin.DATETIME,
     )
     implementation(project(":core:core-exception"))
     implementation(project(":core:core-model"))

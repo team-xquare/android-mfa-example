@@ -21,4 +21,8 @@ object AndroidConfig {
     object KotlinOptions {
         val JVM_TARGET = JavaVersion.VERSION_17.toString()
     }
+
+    object ComposeOptions {
+        const val VERSION_KOTLIN_COMPILER_EXTENSION = "1.4.3"
+    }
 }
