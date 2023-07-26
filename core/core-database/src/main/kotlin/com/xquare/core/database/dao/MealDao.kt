@@ -8,7 +8,6 @@ import androidx.room.Transaction
 import com.xquare.core.database.model.MealEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.Instant
-import kotlin.time.Duration.Companion.days
 
 @Dao
 internal interface MealDao {
@@ -31,11 +30,7 @@ internal interface MealDao {
             WHERE date BETWEEN :from AND :to;
         """,
     )
-    fun findByDateBetween(
-        date: Instant,
-        from: Instant = date.minus(15.days),
-        to: Instant = date.plus(15.days),
-    ): Flow<List<MealEntity>>
+    fun findByDateBetween(from: Instant, to: Instant): Flow<List<MealEntity>>
 
     @Transaction
     @Query(
