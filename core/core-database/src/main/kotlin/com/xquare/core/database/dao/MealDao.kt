@@ -48,9 +48,7 @@ internal interface MealDao {
     fun save(value: MealEntity)
 
     @Transaction
-    @Insert(
-        onConflict = OnConflictStrategy.IGNORE,
-    )
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun saveAll(values: List<MealEntity>)
 
     @Transaction
