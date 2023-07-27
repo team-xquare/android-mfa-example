@@ -42,6 +42,7 @@ object Libraries {
         const val AUTH = "io.ktor:ktor-client-auth:$VERSION_KTOR"
         const val KOTLIN_SERIALIZATION_JSON =
             "io.ktor:ktor-serialization-kotlinx-json:$VERSION_KTOR"
+        const val LOGGING = "io.ktor:ktor-client-logging:$VERSION_KTOR"
     }
 
     object Koin {
