@@ -4,7 +4,7 @@ import com.xquare.core.model.Meal
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDate
 
-interface MealDatasource {
+interface MealDbDatasource {
     fun fetchMeal(date: LocalDate): Flow<Meal>
     fun fetchMealsWithTerm(from: LocalDate, to: LocalDate): Flow<List<Meal>>
     fun fetchAllMeals(): Flow<List<Meal>>

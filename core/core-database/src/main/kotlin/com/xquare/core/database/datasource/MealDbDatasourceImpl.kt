@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.LocalDate
 
-internal class MealDatasourceImpl(
+internal class MealDbDatasourceImpl(
     private val mealDao: MealDao,
-) : MealDatasource {
+) : MealDbDatasource {
     override fun fetchMeal(date: LocalDate): Flow<Meal> =
         mealDao.findByDate(date).map(MealEntity::asExternalModel)
 
