@@ -40,6 +40,7 @@ dependencies {
         Libraries.Ktor.CONTENT_NEGOTIATION,
         Libraries.Ktor.AUTH,
         Libraries.Ktor.KOTLIN_SERIALIZATION_JSON,
+        Libraries.Ktor.LOGGING,
         Libraries.Koin.KOIN,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
