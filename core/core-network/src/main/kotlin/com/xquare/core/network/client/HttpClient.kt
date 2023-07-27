@@ -32,11 +32,12 @@ internal val httpClient = HttpClient(CIO) {
     defaultRequest {
         contentType(ContentType.Application.Json)
         url(
-            urlString = if (isDebugEnabled) {
+            urlString = PROD_BASE_URL,
+            /*urlString = if (isDebugEnabled) {
                 STAG_BASE_URL
             } else {
                 PROD_BASE_URL
-            },
+            },*/
         )
     }
 }
