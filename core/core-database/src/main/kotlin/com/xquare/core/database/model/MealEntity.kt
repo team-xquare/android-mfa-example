@@ -6,9 +6,7 @@ import androidx.room.PrimaryKey
 import com.xquare.core.model.Meal
 import kotlinx.datetime.Instant
 
-@Entity(
-    tableName = "tbl_meal",
-)
+@Entity(tableName = "tbl_meal")
 internal data class MealEntity(
 
     @PrimaryKey @ColumnInfo(name = "date") val date: Instant,
