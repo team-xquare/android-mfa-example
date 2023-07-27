@@ -14,14 +14,14 @@ import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
-val xquareModule = module {
-    includes(coreModules)
+internal val xquareModule = module {
+    includes(coreModule)
     single(qualifier = named(DiQualifier.Build.DEBUG)) { BuildConfig.DEBUG }
     viewModel { MainActivityViewModel() }
     viewModelOf(::MainActivityViewModel)
 }
 
-private val coreModules: Module
+private val coreModule: Module
     get() = module {
         includes(
             commonModule,
