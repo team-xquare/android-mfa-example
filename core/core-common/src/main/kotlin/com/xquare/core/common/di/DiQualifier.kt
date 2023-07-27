@@ -7,4 +7,8 @@ object DiQualifier {
         const val REFRESH_TOKEN = "refresh_token"
         const val REFRESH_TOKEN_EXPIRATION = "refresh_token_expiration"
     }
+
+    object Build {
+        const val DEBUG = "debug"
+    }
 }
