@@ -4,12 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.xquare.core.model.Meal
-import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDate
 
 @Entity(tableName = "tbl_meal")
 internal data class MealEntity(
-
-    @PrimaryKey @ColumnInfo(name = "date") val date: Instant,
+    @PrimaryKey @ColumnInfo(name = "date") val date: LocalDate,
     @ColumnInfo(name = "breakfast") val breakfast: List<String>,
     @ColumnInfo(name = "kcal_breakfast") val kcalOfBreakfast: String,
     @ColumnInfo(name = "lunch") val lunch: List<String>,
