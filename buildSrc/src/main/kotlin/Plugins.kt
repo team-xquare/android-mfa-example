@@ -5,4 +5,5 @@ object Plugins {
     const val KAPT = "kotlin-kapt"
     const val LIBRARY_JAVA = "java-library"
     const val KOTLIN_JVM = "org.jetbrains.kotlin.jvm"
+    const val KOTLIN_SERIALIZATION = "kotlinx-serialization"
 }
