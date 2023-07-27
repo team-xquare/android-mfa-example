@@ -10,6 +10,7 @@ import com.xquare.core.datastore.di.dataStoreModule
 import com.xquare.core.network.di.networkModule
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
+import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -20,12 +21,13 @@ val xquareModule = module {
     viewModelOf(::MainActivityViewModel)
 }
 
-val coreModules = module {
-    includes(
-        commonModule,
-        dataModule,
-        databaseModule,
-        dataStoreModule,
-        networkModule,
-    )
-}
+private val coreModules: Module
+    get() = module {
+        includes(
+            commonModule,
+            dataModule,
+            databaseModule,
+            dataStoreModule,
+            networkModule,
+        )
+    }
