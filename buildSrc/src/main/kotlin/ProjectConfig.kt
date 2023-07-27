@@ -5,5 +5,7 @@ object ProjectConfig {
 
         const val GRADLE_ANDROID = "com.android.tools.build:gradle:$VERSION_GRADLE_ANDROID"
         const val GRADLE_KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VERSION_GRADLE_KOTLIN"
+        const val GRADLE_KOTLIN_SERIALIZATION =
+            "org.jetbrains.kotlin:kotlin-serialization:$VERSION_GRADLE_KOTLIN"
     }
 }
