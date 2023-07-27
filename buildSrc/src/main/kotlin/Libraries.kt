@@ -33,11 +33,10 @@ object Libraries {
         const val NAVIGATION_COMPOSE = "androidx.navigation:navigation-compose:$VERSION_NAVIGATION"
     }
 
-    object Retrofit {
-        private const val VERSION_RETROFIT = "2.9.0"
+    object Ktor {
+        private const val VERSION_KTOR = "2.3.2"
 
-        const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION_RETROFIT"
-        const val CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:$VERSION_RETROFIT"
+        const val KTOR = "io.ktor:ktor-client-android:$VERSION_KTOR"
     }
 
     object Koin {
@@ -83,8 +82,11 @@ object Libraries {
 
     object Kotlin {
         private const val VERSION_DATETIME = "0.4.0"
+        private const val VERSION_SERIALIZATION_JSON = "1.5.1"
 
         const val DATETIME = "org.jetbrains.kotlinx:kotlinx-datetime:$VERSION_DATETIME"
+        const val SERIALIZATION_JSON =
+            "org.jetbrains.kotlinx:kotlinx-serialization-json:$VERSION_SERIALIZATION_JSON"
     }
 
     object Datastore {
