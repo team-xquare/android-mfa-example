@@ -8,11 +8,11 @@ import org.koin.dsl.module
 
 val dataStoreModule = module {
     includes(
-        preferencesDatasourceModule,
+        datasourceModule,
     )
     single { androidApplication().preferencesDatastore }
 }
 
-private val preferencesDatasourceModule = module {
+private val datasourceModule = module {
     single<UserPreferencesDataSource> { UserPreferencesDataSourceImpl(get()) }
 }
