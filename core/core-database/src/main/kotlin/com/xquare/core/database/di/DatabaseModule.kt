@@ -2,8 +2,8 @@ package com.xquare.core.database.di
 
 import androidx.room.Room
 import com.xquare.core.database.XquareDatabase
-import com.xquare.core.database.datasource.MealDbDatasource
-import com.xquare.core.database.datasource.MealDbDatasourceImpl
+import com.xquare.core.database.datasource.MealDatabaseDatasource
+import com.xquare.core.database.datasource.MealDatabaseDatasourceImpl
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
@@ -22,7 +22,7 @@ val databaseModule = module {
 }
 
 private val datasourceModule = module {
-    single<MealDbDatasource> { MealDbDatasourceImpl(get()) }
+    single<MealDatabaseDatasource> { MealDatabaseDatasourceImpl(get()) }
 }
 
 private val daoModule = module {
