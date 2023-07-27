@@ -3,6 +3,7 @@ plugins {
         Plugins.LIBRARY_ANDROID,
         Plugins.KOTLIN_ANDROID,
         Plugins.KAPT,
+        Plugins.KOTLIN_SERIALIZATION,
     )
 }
 
