@@ -47,6 +47,7 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
         Libraries.Lifecycle.VIEWMODEL,
+        Libraries.Kotlin.DATETIME,
         Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
