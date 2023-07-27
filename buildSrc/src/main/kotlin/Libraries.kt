@@ -37,6 +37,11 @@ object Libraries {
         private const val VERSION_KTOR = "2.3.2"
 
         const val KTOR = "io.ktor:ktor-client-android:$VERSION_KTOR"
+        const val CIO = "io.ktor:ktor-client-cio:$VERSION_KTOR"
+        const val CONTENT_NEGOTIATION = "io.ktor:ktor-client-content-negotiation:$VERSION_KTOR"
+        const val AUTH = "io.ktor:ktor-client-auth:$VERSION_KTOR"
+        const val KOTLIN_SERIALIZATION_JSON =
+            "io.ktor:ktor-serialization-kotlinx-json:$VERSION_KTOR"
     }
 
     object Koin {
