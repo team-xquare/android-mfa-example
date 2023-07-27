@@ -7,7 +7,7 @@ import androidx.room.Query
 import androidx.room.Transaction
 import com.xquare.core.database.model.MealEntity
 import kotlinx.coroutines.flow.Flow
-import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDate
 
 @Dao
 internal interface MealDao {
@@ -20,7 +20,7 @@ internal interface MealDao {
             WHERE date = :date;
         """,
     )
-    fun findByDate(date: Instant): Flow<MealEntity>
+    fun findByDate(date: LocalDate): Flow<MealEntity>
 
     @Transaction
     @Query(
@@ -30,7 +30,7 @@ internal interface MealDao {
             WHERE date BETWEEN :from AND :to;
         """,
     )
-    fun findByDateBetween(from: Instant, to: Instant): Flow<List<MealEntity>>
+    fun findByDateBetween(from: LocalDate, to: LocalDate): Flow<List<MealEntity>>
 
     @Transaction
     @Query(
@@ -42,9 +42,7 @@ internal interface MealDao {
     fun findAll(): Flow<List<MealEntity>>
 
     @Transaction
-    @Insert(
-        onConflict = OnConflictStrategy.IGNORE,
-    )
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun save(value: MealEntity)
 
     @Transaction
@@ -58,7 +56,7 @@ internal interface MealDao {
             WHERE date = :date;
         """,
     )
-    fun deleteByDate(date: Instant)
+    fun deleteByDate(date: LocalDate)
 
     @Transaction
     @Query(

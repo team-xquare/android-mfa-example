@@ -7,15 +7,15 @@ import com.xquare.core.database.model.asExternalModel
 import com.xquare.core.model.Meal
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDate
 
-internal class MealDatasourceImpl(
+internal class MealDatabaseDatasourceImpl(
     private val mealDao: MealDao,
-) : MealDatasource {
-    override fun fetchMeal(date: Instant): Flow<Meal> =
+) : MealDatabaseDatasource {
+    override fun fetchMeal(date: LocalDate): Flow<Meal> =
         mealDao.findByDate(date).map(MealEntity::asExternalModel)
 
-    override fun fetchMealsWithTerm(from: Instant, to: Instant): Flow<List<Meal>> =
+    override fun fetchMealsWithTerm(from: LocalDate, to: LocalDate): Flow<List<Meal>> =
         mealDao.findByDateBetween(from, to).map { it.map(MealEntity::asExternalModel) }
 
     override fun fetchAllMeals(): Flow<List<Meal>> =
@@ -25,7 +25,7 @@ internal class MealDatasourceImpl(
 
     override fun saveAllMeals(meal: List<Meal>) = mealDao.saveAll(meal.map(Meal::asDatabaseEntity))
 
-    override fun deleteMealByDate(date: Instant) = mealDao.deleteByDate(date)
+    override fun deleteMealByDate(date: LocalDate) = mealDao.deleteByDate(date)
 
     override fun deleteAllMeals() = mealDao.deleteAll()
 }

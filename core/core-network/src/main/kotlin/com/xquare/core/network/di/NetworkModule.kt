@@ -1,15 +1,28 @@
 package com.xquare.core.network.di
 
-import com.xquare.core.network.datasource.UserDataSource
-import com.xquare.core.network.datasource.UserDataSourceImpl
-import com.xquare.core.network.interceptor.AuthorizationInterceptor
+import com.xquare.core.network.apiservice.MealApiService
+import com.xquare.core.network.apiservice.MealApiServiceImpl
+import com.xquare.core.network.client.httpClient
+import com.xquare.core.network.datasource.MealNetworkDataSource
+import com.xquare.core.network.datasource.MealNetworkDataSourceImpl
+import org.koin.core.module.Module
 import org.koin.dsl.module
 
-val networkModule = module {
-    includes(dataSourceModule)
-    single { AuthorizationInterceptor() }
-}
+val networkModule: Module
+    get() = module {
+        includes(
+            dataSourceModule,
+            apiServiceModule,
+        )
+        single { httpClient }
+    }
 
-private val dataSourceModule = module {
-    single<UserDataSource> { UserDataSourceImpl() }
-}
+private val dataSourceModule: Module
+    get() = module {
+        single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
+    }
+
+private val apiServiceModule: Module
+    get() = module {
+        single<MealApiService> { MealApiServiceImpl(get()) }
+    }

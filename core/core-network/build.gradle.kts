@@ -3,6 +3,7 @@ plugins {
         Plugins.LIBRARY_ANDROID,
         Plugins.KOTLIN_ANDROID,
         Plugins.KAPT,
+        Plugins.KOTLIN_SERIALIZATION,
     )
 }
 
@@ -34,10 +35,17 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
-        Libraries.Retrofit.RETROFIT,
-        Libraries.Retrofit.CONVERTER_GSON,
+        Libraries.Ktor.KTOR,
+        Libraries.Ktor.CIO,
+        Libraries.Ktor.CONTENT_NEGOTIATION,
+        Libraries.Ktor.AUTH,
+        Libraries.Ktor.KOTLIN_SERIALIZATION_JSON,
+        Libraries.Ktor.LOGGING,
         Libraries.Koin.KOIN,
+        Libraries.Kotlin.DATETIME,
+        Libraries.Kotlin.SERIALIZATION_JSON,
     )
+    implementation(project(":core:core-common"))
     implementation(project(":core:core-exception"))
     implementation(project(":core:core-model"))
 }

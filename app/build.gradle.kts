@@ -35,6 +35,10 @@ android {
         dataBinding = true
         compose = true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion =
+            AndroidConfig.ComposeOptions.VERSION_KOTLIN_COMPILER_EXTENSION
+    }
 }
 
 dependencies {
@@ -43,10 +47,14 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
         Libraries.Lifecycle.VIEWMODEL,
+        Libraries.Kotlin.DATETIME,
         Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Navigation.NAVIGATION,
         Libraries.Navigation.NAVIGATION_UI,
         Libraries.Xds.XDS,
+        Libraries.Compose.COMPOSE,
+        Libraries.Compose.COMPOSE_TOOLING,
+        Libraries.Compose.COMPOSE_ANIMATION,
     )
 
     // todo implement function receives vararg params
@@ -54,6 +62,8 @@ dependencies {
     implementation(project(":core:core-data"))
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
+    implementation(project(":core:core-exception"))
+    implementation(project(":core:core-model"))
     implementation(project(":core:core-network"))
     implementation(project(":core:core-ui"))
     implementation(project(":feature:feature-allservices"))

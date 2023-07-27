@@ -1,9 +1,9 @@
 package com.xquare.core.model
 
-import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDate
 
 data class Meal(
-    val date: Instant,
+    val date: LocalDate,
     val breakfast: List<String>,
     val kcalOfBreakfast: String,
     val lunch: List<String>,
