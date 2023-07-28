@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/included_nav_graph_main">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/included_nav_graph_main"
+    app:startDestination="@id/fragment_main_home">
+
+    <fragment
+        android:id="@+id/fragment_main_home"
+        android:name="com.xquare.feature.main.home.HomeFragment" />
 
 </navigation>
