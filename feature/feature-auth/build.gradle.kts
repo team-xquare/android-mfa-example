@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xquare.feature.signin"
+    namespace = "com.xquare.feature.auth"
     compileSdk = AndroidConfig.Sdk.COMPILE_SDK
 
     defaultConfig {
