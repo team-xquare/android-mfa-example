@@ -75,5 +75,5 @@ dependencies {
     implementation(project(":feature:feature-home"))
     implementation(project(":feature:feature-mypage"))
     implementation(project(":feature:feature-schedule"))
-    implementation(project(":feature:feature-signin"))
+    implementation(project(":feature:feature-auth"))
 }

@@ -34,5 +34,5 @@ include(
     ":feature:feature-home",
     ":feature:feature-mypage",
     ":feature:feature-schedule",
-    ":feature:feature-signin",
+    ":feature:feature-auth",
 )
