@@ -4,6 +4,7 @@
     android:id="@+id/included_nav_graph_main"
     app:startDestination="@id/fragment_main_home">
 
+    <!-- todo improve, separate from app module -->
     <fragment
         android:id="@+id/fragment_main_home"
         android:name="com.xquare.feature.main.home.HomeFragment" />
