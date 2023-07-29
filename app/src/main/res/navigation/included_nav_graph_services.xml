@@ -2,11 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/included_nav_graph_services"
-    app:startDestination="@id/fragment_services_home">
+    app:startDestination="@id/included_nav_graph_services_main">
 
-    <!-- todo improve, separate from app module -->
-    <fragment
-        android:id="@+id/fragment_services_home"
-        android:name="com.xquare.feature.main.home.HomeFragment" />
+    <include app:graph="@navigation/included_nav_graph_services_main" />
 
 </navigation>
