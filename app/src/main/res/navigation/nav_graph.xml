@@ -4,6 +4,8 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/included_nav_graph_main">
 
-    <include app:graph="@navigation/included_nav_graph_main" />
+    <include app:graph="@navigation/included_nav_graph_services" />
+
+    <include app:graph="@navigation/included_nav_graph_auth" />
 
 </navigation>
