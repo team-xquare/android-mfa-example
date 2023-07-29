@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/included_nav_graph_main"
-    app:startDestination="@id/fragment_main_home">
+    android:id="@+id/included_nav_graph_services"
+    app:startDestination="@id/fragment_services_home">
 
     <!-- todo improve, separate from app module -->
     <fragment
-        android:id="@+id/fragment_main_home"
+        android:id="@+id/fragment_services_home"
         android:name="com.xquare.feature.main.home.HomeFragment" />
 
 </navigation>
