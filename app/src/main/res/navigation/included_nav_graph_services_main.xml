@@ -15,4 +15,8 @@
     <fragment
         android:id="@+id/fragment_services_main_feed"
         android:name="com.xqaure.feature.main.feed.FeedFragment" />
+
+    <fragment
+        android:id="@+id/fragment_services_main_application"
+        android:name="com.xquare.feature.main.application.ApplicationFragment" />
 </navigation>
