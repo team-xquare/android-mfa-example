@@ -30,9 +30,9 @@ include(
     ":core:core-ui",
     ":feature:feature-allservices",
     ":feature:feature-application",
+    ":feature:feature-auth",
     ":feature:feature-feed",
     ":feature:feature-home",
     ":feature:feature-mypage",
     ":feature:feature-schedule",
-    ":feature:feature-auth",
 )
