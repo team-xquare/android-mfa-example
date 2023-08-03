@@ -19,4 +19,9 @@
     <fragment
         android:id="@+id/fragment_services_main_application"
         android:name="com.xquare.feature.main.application.ApplicationFragment" />
+
+    <fragment
+        android:id="@+id/fragment_services_main_all_services"
+        android:name="com.xquare.feature.allservices.AllServicesFragment" />
+
 </navigation>
