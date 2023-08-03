@@ -11,4 +11,8 @@
     <fragment
         android:id="@+id/fragment_services_main_calendar"
         android:name="com.xquare.feature.main.schedule.ScheduleFragment" />
+
+    <fragment
+        android:id="@+id/fragment_services_main_feed"
+        android:name="com.xqaure.feature.main.feed.FeedFragment" />
 </navigation>
