@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/included_nav_graph_services_main"
     app:startDestination="@id/fragment_services_main_home">
 
     <fragment
         android:id="@+id/fragment_services_main_home"
-        android:name="com.xquare.feature.main.home.HomeFragment" />
+        android:name="com.xquare.feature.main.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/fragment_services_main_calendar"
-        android:name="com.xquare.feature.main.schedule.ScheduleFragment" />
+        android:id="@+id/fragment_services_main_schedule"
+        android:name="com.xquare.feature.main.schedule.ScheduleFragment"
+        tools:layout="@layout/fragment_schedule" />
 
     <fragment
         android:id="@+id/fragment_services_main_feed"
-        android:name="com.xqaure.feature.main.feed.FeedFragment" />
+        android:name="com.xqaure.feature.main.feed.FeedFragment"
+        tools:layout="@layout/fragment_feed" />
 
     <fragment
         android:id="@+id/fragment_services_main_application"
-        android:name="com.xquare.feature.main.application.ApplicationFragment" />
+        android:name="com.xquare.feature.main.application.ApplicationFragment"
+        tools:layout="@layout/fragment_application" />
 
     <fragment
         android:id="@+id/fragment_services_main_all_services"
-        android:name="com.xquare.feature.allservices.AllServicesFragment" />
+        android:name="com.xquare.feature.allservices.AllServicesFragment"
+        tools:layout="@layout/fragment_all_services" />
 
 </navigation>
