@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">XQUARE</string>
+    <string name="services_main_home">홈</string>
+    <string name="services_main_schedule">일정</string>
+    <string name="services_main_feed">피드</string>
+    <string name="services_main_application">신청</string>
+    <string name="services_main_all_services">전체</string>
 </resources>
