@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_bottom_navigation_services_main_home"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/services_main_home" />
+
+    <item
+        android:id="@+id/item_bottom_navigation_services_main_schedule"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/services_main_schedule" />
+
+    <item
+        android:id="@+id/item_bottom_navigation_services_main_feed"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/services_main_feed" />
+
+    <item
+        android:id="@+id/item_bottom_navigation_services_main_application"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/services_main_application" />
+
+    <item
+        android:id="@+id/item_bottom_navigation_services_main_all_services"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/services_main_all_services" />
+
+</menu>
