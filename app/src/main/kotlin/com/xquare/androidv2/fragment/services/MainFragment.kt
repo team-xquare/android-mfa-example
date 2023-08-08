@@ -12,12 +12,20 @@ import com.xquare.androidv2.databinding.FragmentServicesMainBinding
 internal class MainFragment : Fragment(R.layout.content_main) {
 
     private var _binding: FragmentServicesMainBinding? = null
+    private val binding: FragmentServicesMainBinding
+        get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+    ): View {
+        _binding = FragmentServicesMainBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
