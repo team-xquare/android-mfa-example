@@ -55,6 +55,9 @@ dependencies {
         Libraries.Compose.COMPOSE,
         Libraries.Compose.COMPOSE_TOOLING,
         Libraries.Compose.COMPOSE_ANIMATION,
+        Libraries.Flipper.FLIPPER,
+        Libraries.Flipper.FLIPPER_PLUGIN_NETWORK,
+        Libraries.SoLoader.SOLOADER,
     )
 
     // todo implement function receives vararg params

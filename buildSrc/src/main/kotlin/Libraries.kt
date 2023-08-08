@@ -101,4 +101,19 @@ object Libraries {
         const val DATASTORE_PREFERENCES =
             "androidx.datastore:datastore-preferences:$VERSION_DATASTORE"
     }
+
+    object Flipper {
+        private const val VERSION_FLIPPER = "0.201.0"
+
+        const val FLIPPER = "com.facebook.flipper:flipper:$VERSION_FLIPPER"
+        const val FLIPPER_NOOP = "com.facebook.flipper:flipper-noop:$VERSION_FLIPPER"
+        const val FLIPPER_PLUGIN_NETWORK =
+            "com.facebook.flipper:flipper-network-plugin:$VERSION_FLIPPER"
+    }
+
+    object SoLoader {
+        private const val VERSION_SO_LOADER = "0.10.5"
+
+        const val SOLOADER = "com.facebook.soloader:soloader:$VERSION_SO_LOADER"
+    }
 }

@@ -7,6 +7,14 @@ fun DependencyHandler.implementation(vararg dependencies: String) {
     dependencies.forEach { dependency -> add("implementation", dependency) }
 }
 
+fun DependencyHandler.debugImplementation(vararg dependencies: String) {
+    dependencies.forEach { dependency -> add("debugImplementation", dependency) }
+}
+
+fun DependencyHandler.releaseImplementation(vararg dependencies: String) {
+    dependencies.forEach { dependency -> add("releaseImplementation", dependency) }
+}
+
 fun DependencyHandler.projectImplementation(vararg projectPaths: String) {
     projectPaths.forEach { projectPath -> project(path = projectPath) }
 }
