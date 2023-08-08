@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import com.xquare.androidv2.databinding.ActivityMainBinding
+import com.xquare.androidv2.databinding.ActivityRootBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-internal class MainActivity : AppCompatActivity() {
-    private val viewModel: MainActivityViewModel by viewModel()
-    private val binding by lazy { ActivityMainBinding.inflate(LayoutInflater.from(this)) }
+internal class RootActivity : AppCompatActivity() {
+    private val viewModel: RootViewModel by viewModel()
+    private val binding by lazy { ActivityRootBinding.inflate(LayoutInflater.from(this)) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
