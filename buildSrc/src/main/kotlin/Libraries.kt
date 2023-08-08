@@ -107,6 +107,8 @@ object Libraries {
 
         const val FLIPPER = "com.facebook.flipper:flipper:$VERSION_FLIPPER"
         const val FLIPPER_NOOP = "com.facebook.flipper:flipper-noop:$VERSION_FLIPPER"
+        const val FLIPPER_PLUGIN_NETWORK =
+            "com.facebook.flipper:flipper-network-plugin:$VERSION_FLIPPER"
     }
 
     object SoLoader {
