@@ -55,11 +55,7 @@ dependencies {
         Libraries.Compose.COMPOSE,
         Libraries.Compose.COMPOSE_TOOLING,
         Libraries.Compose.COMPOSE_ANIMATION,
-    )
-    debugImplementation(
         Libraries.Flipper.FLIPPER,
-    )
-    releaseImplementation(
         Libraries.SoLoader.SOLOADER,
     )
 
