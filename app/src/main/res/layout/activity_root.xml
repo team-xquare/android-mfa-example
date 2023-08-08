@@ -11,5 +11,5 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout="@layout/content_root" />
+        app:layout="@layout/fragment_services_main" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
