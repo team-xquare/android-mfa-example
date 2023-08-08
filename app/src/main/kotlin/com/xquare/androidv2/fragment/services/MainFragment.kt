@@ -9,7 +9,7 @@ import com.xquare.androidv2.R
 import com.xquare.androidv2.databinding.FragmentServicesMainBinding
 
 // todo make base fragment component
-internal class MainFragment : Fragment(R.layout.content_main) {
+internal class MainFragment : Fragment(R.layout.fragment_services_main) {
 
     private var _binding: FragmentServicesMainBinding? = null
     private val binding: FragmentServicesMainBinding
