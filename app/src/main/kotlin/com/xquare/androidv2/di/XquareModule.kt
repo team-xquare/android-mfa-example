@@ -1,7 +1,7 @@
 package com.xquare.androidv2.di
 
 import com.xquare.androidv2.BuildConfig
-import com.xquare.androidv2.MainActivityViewModel
+import com.xquare.androidv2.RootViewModel
 import com.xquare.core.common.di.DiQualifier
 import com.xquare.core.common.di.commonModule
 import com.xquare.core.data.di.dataModule
@@ -17,8 +17,8 @@ import org.koin.dsl.module
 internal val xquareModule = module {
     includes(coreModule)
     single(qualifier = named(DiQualifier.Build.DEBUG)) { BuildConfig.DEBUG }
-    viewModel { MainActivityViewModel() }
-    viewModelOf(::MainActivityViewModel)
+    viewModel { RootViewModel() }
+    viewModelOf(::RootViewModel)
 }
 
 private val coreModule: Module
