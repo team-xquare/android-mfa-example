@@ -7,6 +7,7 @@
     tools:context=".fragment.services.MainFragment">
 
     <include
+        android:id="@+id/included_layout_services_main"
         layout="@layout/content_services_main"
         android:layout_width="0dp"
         android:layout_height="0dp"

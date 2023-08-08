@@ -8,6 +8,7 @@
     tools:context=".RootActivity">
 
     <include
+        android:id="@+id/included_layout_root"
         layout="@layout/content_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
