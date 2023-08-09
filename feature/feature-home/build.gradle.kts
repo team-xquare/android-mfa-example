@@ -28,6 +28,7 @@ android {
         targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
+    buildFeatures { dataBinding = true }
 }
 
 dependencies {
