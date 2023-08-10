@@ -47,7 +47,6 @@ internal class XquareApplication : Application() {
     private fun initFlipper() {
         if (isDebugEnabled && FlipperUtils.shouldEnableFlipper(this@XquareApplication)) {
             AndroidFlipperClient.getInstance(this@XquareApplication).apply {
-
                 // todo make function receives collection of plugins by parameter
                 addPlugin(DatabasesFlipperPlugin(this@XquareApplication))
                 addPlugin(
