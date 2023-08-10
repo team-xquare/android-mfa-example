@@ -36,7 +36,6 @@ internal class RootActivity : AppCompatActivity() {
 
     // todo move to utils
     private fun initEdgeToEdge() {
-        // val windowInsetsController = WindowCompat.getInsetsController(window, binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
             view.updateLayoutParams<MarginLayoutParams> {
