@@ -17,8 +17,8 @@ fun measureNavigationBarHeight(context: Context): Int {
     return context.resources.getDimensionPixelSize(resourceId)
 }
 
-fun Context?.measureNavigationBarHeight(): Int {
-    requireNotNull(this)
-
-    return measureNavigationBarHeight(this)
-}
+val Context?.measuredSystemNavigationBarHeight: Int
+    get() {
+        requireNotNull(this)
+        return measureNavigationBarHeight(this)
+    }
