@@ -37,12 +37,13 @@ internal class RootActivity : AppCompatActivity() {
     // todo move to utils
     private fun initEdgeToEdge() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.updateLayoutParams<MarginLayoutParams> {
-                leftMargin = insets.left
-                bottomMargin = insets.bottom
-                rightMargin = insets.right
-                topMargin = insets.top
+            windowInsets.getInsets(WindowInsetsCompat.Type.systemBars()).let { insets ->
+                view.updateLayoutParams<MarginLayoutParams> {
+                    leftMargin = insets.left
+                    bottomMargin = insets.bottom
+                    rightMargin = insets.right
+                    topMargin = insets.top
+                }
             }
 
             WindowInsetsCompat.CONSUMED
