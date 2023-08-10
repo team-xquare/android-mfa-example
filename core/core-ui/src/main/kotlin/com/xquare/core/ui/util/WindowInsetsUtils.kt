@@ -8,22 +8,33 @@ data class SystemBarsHeight(
     val navigationBarHeight: Int,
 )
 
-@SuppressLint("InternalInsetResource", "DiscouragedApi")
-fun measureSystemNavigationBarHeight(context: Context): Int {
-    val resId = context.resources.getIdentifier("navigation_bar_height", "dimen", "android")
+fun measureSystemBarsHeight(context: Context): SystemBarsHeight = SystemBarsHeight(
+    statusBarHeight = measureSystemStatusBarHeight(context),
+    navigationBarHeight = measureSystemNavigationBarHeight(context),
+)
 
-    check(resId > 0)
+fun measureSystemStatusBarHeight(context: Context): Int =
+    context.measureSystemBarHeightOf(SystemBarHeight.STATUS_BAR)
 
-    return context.resources.getDimensionPixelSize(resId)
+fun measureSystemNavigationBarHeight(context: Context): Int =
+    context.measureSystemBarHeightOf(SystemBarHeight.NAVIGATION_BAR)
+
+private enum class SystemBarHeight(
+    val value: String,
+) {
+    STATUS_BAR("status_bar_height"), NAVIGATION_BAR("navigation_bar_height"),
+}
+
+private fun Context.measureSystemBarHeightOf(type: SystemBarHeight): Int {
+    val resId = getAndroidDimenIdOf(type.value)
+    return resources.getDimensionPixelSize(resId)
 }
 
 @SuppressLint("InternalInsetResource", "DiscouragedApi")
-fun measureSystemStatusBarHeight(context: Context): Int {
-    val resId = context.resources.getIdentifier("status_bar_height", "dimen", "android")
-
+private fun Context.getAndroidDimenIdOf(name: String): Int {
+    val resId = resources.getIdentifier(name, "dimen", "android")
     check(resId > 0)
-
-    return context.resources.getDimensionPixelSize(resId)
+    return resId
 }
 
 val Context?.measuredSystemNavigationBarHeight: Int
@@ -36,4 +47,10 @@ val Context?.measuredSystemStatusBarHeight: Int
     get() {
         requireNotNull(this)
         return measureSystemStatusBarHeight(this)
+    }
+
+val Context?.measuredSystemBarsHeight: SystemBarsHeight
+    get() {
+        requireNotNull(this)
+        return measureSystemBarsHeight(this)
     }
