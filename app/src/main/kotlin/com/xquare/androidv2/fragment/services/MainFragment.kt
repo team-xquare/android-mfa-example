@@ -17,10 +17,10 @@ internal class MainFragment : Fragment(R.layout.fragment_services_main) {
     private val binding: FragmentServicesMainBinding
         get() = _binding!!
 
-    // todo public operator, for data binding features
-    val systemStatusBarHeight: Int
-        get() = context.measuredSystemStatusBarHeight
-    val systemNavigationHeight: Int
+    private val navHostFragment: NavHostFragment
+        get() = childFragmentManager.findFragmentById(R.id.nav_host_fragment_content_services_main) as NavHostFragment
+
+    private val systemNavigationHeight: Int
         get() = context.measuredSystemNavigationBarHeight
 
     override fun onCreateView(
