@@ -12,7 +12,7 @@ data class SystemBarsHeight(
 fun measureSystemNavigationBarHeight(context: Context): Int {
     val resId = context.resources.getIdentifier("navigation_bar_height", "dimen", "android")
 
-    check(resId >= 0)
+    check(resId > 0)
 
     return context.resources.getDimensionPixelSize(resId)
 }
