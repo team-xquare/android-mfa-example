@@ -21,6 +21,5 @@ fun measureSystemNavigationBarHeight(context: Context): Int {
 val Context?.measuredSystemNavigationBarHeight: Int
     get() {
         requireNotNull(this)
-        return measureNavigationBarHeight(this)
         return measureSystemNavigationBarHeight(this)
     }
