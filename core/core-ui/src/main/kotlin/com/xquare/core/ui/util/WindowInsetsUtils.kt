@@ -9,15 +9,9 @@ data class SystemBarsHeight(
 )
 
 fun measureSystemBarsHeight(context: Context): SystemBarsHeight = SystemBarsHeight(
-    statusBarHeight = measureSystemStatusBarHeight(context),
-    navigationBarHeight = measureSystemNavigationBarHeight(context),
+    statusBarHeight = context.measureSystemBarHeightOf(SystemBarHeight.STATUS_BAR),
+    navigationBarHeight = context.measureSystemBarHeightOf(SystemBarHeight.NAVIGATION_BAR),
 )
-
-fun measureSystemStatusBarHeight(context: Context): Int =
-    context.measureSystemBarHeightOf(SystemBarHeight.STATUS_BAR)
-
-fun measureSystemNavigationBarHeight(context: Context): Int =
-    context.measureSystemBarHeightOf(SystemBarHeight.NAVIGATION_BAR)
 
 private enum class SystemBarHeight(
     val value: String,
@@ -40,13 +34,13 @@ private fun Context.getAndroidDimenIdOf(name: String): Int {
 val Context?.measuredSystemNavigationBarHeight: Int
     get() {
         requireNotNull(this)
-        return measureSystemNavigationBarHeight(this)
+        return this.measureSystemBarHeightOf(SystemBarHeight.NAVIGATION_BAR)
     }
 
 val Context?.measuredSystemStatusBarHeight: Int
     get() {
         requireNotNull(this)
-        return measureSystemStatusBarHeight(this)
+        return this.measureSystemBarHeightOf(SystemBarHeight.STATUS_BAR)
     }
 
 val Context?.measuredSystemBarsHeight: SystemBarsHeight
