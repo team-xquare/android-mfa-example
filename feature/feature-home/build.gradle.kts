@@ -28,12 +28,14 @@ android {
         targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
+    buildFeatures { dataBinding = true }
 }
 
 dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
+        Libraries.ConstraintLayout.CONSTRAINT_LAYOUT,
         Libraries.Xds.XDS,
     )
 }

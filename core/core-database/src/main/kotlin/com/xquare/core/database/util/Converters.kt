@@ -13,3 +13,6 @@ internal class InstantConverter {
     fun instantToEpochMilliseconds(value: Instant?): Long? =
         value?.let(Instant::toEpochMilliseconds)
 }
+
+// todo remove
+internal class DummyConverter
