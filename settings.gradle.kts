@@ -24,7 +24,6 @@ include(
     ":core:core-database",
     ":core:core-datastore",
     ":core:core-network",
-    ":core:core-model",
     ":core:core-ui",
     ":feature:feature-allservices",
     ":feature:feature-application",
