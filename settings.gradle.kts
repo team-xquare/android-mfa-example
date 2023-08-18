@@ -23,6 +23,7 @@ include(
     ":core:core-common",
     ":core:core-database",
     ":core:core-datastore",
+    ":core:core-jwt",
     ":core:core-network",
     ":core:core-ui",
     ":feature:feature-allservices",
