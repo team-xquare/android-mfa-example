@@ -4,7 +4,6 @@ import com.xquare.androidv2.BuildConfig
 import com.xquare.androidv2.RootViewModel
 import com.xquare.core.common.di.DiQualifier
 import com.xquare.core.common.di.commonModule
-import com.xquare.core.data.di.dataModule
 import com.xquare.core.database.di.databaseModule
 import com.xquare.core.datastore.di.dataStoreModule
 import com.xquare.core.network.di.networkModule
@@ -25,7 +24,6 @@ private val coreModule: Module
     get() = module {
         includes(
             commonModule,
-            dataModule,
             databaseModule,
             dataStoreModule,
             networkModule,
