@@ -41,6 +41,5 @@ dependencies {
     kapt(
         Libraries.Room.ROOM_COMPILER,
     )
-    implementation(project(":core:core-exception"))
     implementation(project(":core:core-model"))
 }

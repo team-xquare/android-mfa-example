@@ -39,6 +39,5 @@ dependencies {
         Libraries.Kotlin.DATETIME,
     )
     implementation(project(":core:core-common"))
-    implementation(project(":core:core-exception"))
     implementation(project(":core:core-model"))
 }

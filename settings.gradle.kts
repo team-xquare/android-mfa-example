@@ -23,7 +23,6 @@ include(
     ":core:core-common",
     ":core:core-database",
     ":core:core-datastore",
-    ":core:core-exception",
     ":core:core-network",
     ":core:core-model",
     ":core:core-ui",
