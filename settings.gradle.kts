@@ -26,6 +26,7 @@ include(
     ":core:core-jwt",
     ":core:core-network",
     ":core:core-ui",
+    ":domain:domain-meal",
     ":domain:domain-user",
     ":feature:feature-allservices",
     ":feature:feature-application",
