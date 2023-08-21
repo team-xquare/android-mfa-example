@@ -43,5 +43,5 @@ internal val httpClient = HttpClient(CIO) {
 }
 
 // todo app 모듈로 옮기기
-private const val PROD_BASE_URL = "https://api.xquare.app"
-private const val STAG_BASE_URL = "https://stag-api.xquare.app"
+private const val PROD_BASE_URL = "https://prod-server.xquare.app"
+private const val STAG_BASE_URL = "https://stag-server.xquare.app"
