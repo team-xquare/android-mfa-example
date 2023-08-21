@@ -43,6 +43,7 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Kotlin.DATETIME,
     )
     implementation(project(":common:common-date"))
     implementation(project(":common:common-di"))
