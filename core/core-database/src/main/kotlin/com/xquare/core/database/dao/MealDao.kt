@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDate
 
 @Dao
-internal interface MealDao {
+interface MealDao {
 
     @Transaction
     @Query(
