@@ -22,6 +22,7 @@ include(
     ":app",
     ":common:common-date",
     ":common:common-di",
+    ":common:common-project",
     ":core:core-common",
     ":core:core-database",
     ":core:core-datastore",
