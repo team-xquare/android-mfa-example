@@ -38,4 +38,5 @@ dependencies {
         Libraries.Koin.KOIN,
         Libraries.Kotlin.DATETIME,
     )
+    implementation(project(":common:common-di"))
 }
