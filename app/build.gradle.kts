@@ -65,7 +65,9 @@ dependencies {
     )
 
     // todo implement function receives vararg params
-    implementation(project(":core:core-common"))
+    implementation(project(":common:common-date"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-network"))
