@@ -1,5 +1,5 @@
 package com.xquare.core.network.base
 
-internal interface BaseApiService {
+interface BaseApiService {
     val baseUri: String
 }
