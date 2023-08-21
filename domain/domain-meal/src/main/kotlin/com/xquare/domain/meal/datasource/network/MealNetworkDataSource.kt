@@ -1,9 +1,9 @@
-package com.xquare.core.network.datasource
+package com.xquare.domain.meal.datasource.network
 
-import com.xquare.core.model.Meal
+import com.xquare.domain.meal.model.Meal
 import kotlinx.datetime.LocalDate
 
-interface MealNetworkDataSource {
+internal interface MealNetworkDataSource {
     suspend fun fetchMeal(date: LocalDate): Meal
     suspend fun fetchMealOfMonth(date: LocalDate): List<Meal>
 }
