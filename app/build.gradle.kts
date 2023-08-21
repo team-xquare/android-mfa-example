@@ -70,6 +70,8 @@ dependencies {
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-network"))
     implementation(project(":core:core-ui"))
+    implementation(project(":domain:domain-meal"))
+    implementation(project(":domain:domain-user"))
     implementation(project(":feature:feature-allservices"))
     implementation(project(":feature:feature-application"))
     implementation(project(":feature:feature-feed"))
