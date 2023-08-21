@@ -1,5 +1,6 @@
 package com.xquare.domain.meal.model
 
+import com.xquare.core.database.model.MealEntity
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -14,3 +15,24 @@ internal data class Meal(
     @SerialName("dinner") val dinner: List<String>,
     @SerialName("dinner_kcal") val kcalOfDinner: String,
 )
+
+internal fun Meal.asDatabaseEntity() = MealEntity(
+    date = this.date,
+    breakfast = this.breakfast,
+    kcalOfBreakfast = this.kcalOfBreakfast,
+    lunch = this.lunch,
+    kcalOfLunch = this.kcalOfLunch,
+    dinner = this.dinner,
+    kcalOfDinner = this.kcalOfDinner,
+)
+
+internal fun MealEntity.asExternalModel() = Meal(
+    date = this.date,
+    breakfast = this.breakfast,
+    kcalOfBreakfast = this.kcalOfBreakfast,
+    lunch = this.lunch,
+    kcalOfLunch = this.kcalOfLunch,
+    dinner = this.dinner,
+    kcalOfDinner = this.kcalOfDinner,
+)
+
