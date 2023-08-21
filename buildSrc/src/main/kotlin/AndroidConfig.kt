@@ -25,4 +25,9 @@ object AndroidConfig {
     object ComposeOptions {
         const val VERSION_KOTLIN_COMPILER_EXTENSION = "1.4.3"
     }
+
+    object Http {
+        const val BASE_URL_PROD = "https://prod-server.xquare.app"
+        const val BASE_URL_STAG = "https://stag-server.xquare.app"
+    }
 }
