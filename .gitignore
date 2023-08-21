@@ -124,6 +124,7 @@ obj/
 # IntelliJ IDEA
 *.iws
 /out/
+.DS_Store
 
 # User-specific configurations
 .idea/caches/
