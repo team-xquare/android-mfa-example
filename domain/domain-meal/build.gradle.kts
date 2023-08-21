@@ -37,6 +37,7 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Ktor.KTOR,
         Libraries.Koin.KOIN,
+        Libraries.Datastore.DATASTORE_PREFERENCES,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
     )
