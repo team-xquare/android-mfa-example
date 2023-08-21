@@ -1,7 +1,8 @@
 package com.xquare.domain.meal.datasource.database
 
+import com.xquare.domain.meal.model.Meal
 import kotlinx.coroutines.flow.Flow
-import java.time.LocalDate
+import kotlinx.datetime.LocalDate
 
 internal interface MealDatabaseDataSource {
     fun fetchMeal(date: LocalDate): Flow<Meal>

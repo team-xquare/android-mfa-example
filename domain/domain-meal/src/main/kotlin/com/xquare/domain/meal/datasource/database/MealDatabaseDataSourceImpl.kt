@@ -1,17 +1,17 @@
-package com.xquare.core.database.datasource
+package com.xquare.domain.meal.datasource.database
 
 import com.xquare.core.database.dao.MealDao
 import com.xquare.core.database.model.MealEntity
-import com.xquare.core.database.model.asDatabaseEntity
-import com.xquare.core.database.model.asExternalModel
-import com.xquare.core.model.Meal
+import com.xquare.domain.meal.model.Meal
+import com.xquare.domain.meal.model.asDatabaseEntity
+import com.xquare.domain.meal.model.asExternalModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.LocalDate
 
 internal class MealDatabaseDatasourceImpl(
     private val mealDao: MealDao,
-) : MealDatabaseDatasource {
+) : MealDatabaseDataSource {
     override fun fetchMeal(date: LocalDate): Flow<Meal> =
         mealDao.findByDate(date).map(MealEntity::asExternalModel)
 
