@@ -1,6 +1,7 @@
 package com.xquare.core.network.client
 
 import android.util.Log
+import com.xquare.core.common.di.DiQualifier
 import com.xquare.core.common.util.isDebugEnabled
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
@@ -13,6 +14,8 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
+import org.koin.core.qualifier.named
+import org.koin.java.KoinJavaComponent.get
 
 internal val httpClient = HttpClient(CIO) {
     expectSuccess = true
@@ -32,16 +35,10 @@ internal val httpClient = HttpClient(CIO) {
     defaultRequest {
         contentType(ContentType.Application.Json)
         url(
-            urlString = PROD_BASE_URL,
-            /*urlString = if (isDebugEnabled) {
-                STAG_BASE_URL
-            } else {
-                PROD_BASE_URL
-            },*/
+            urlString = get(
+                clazz = String::class.java,
+                qualifier = named(DiQualifier.Http.BASE_URL),
+            )
         )
     }
 }
-
-// todo app 모듈로 옮기기
-private const val PROD_BASE_URL = "https://prod-server.xquare.app"
-private const val STAG_BASE_URL = "https://stag-server.xquare.app"
