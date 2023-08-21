@@ -1,4 +1,4 @@
-package com.xquare.core.jwt.dao
+package com.xquare.core.jwt.store
 
 import kotlinx.datetime.LocalDateTime
 
