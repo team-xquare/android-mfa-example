@@ -44,6 +44,10 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
     )
+    implementation(project(":core:core-database"))
+    implementation(project(":core:core-datastore"))
+    implementation(project(":core:core-network"))
 }
