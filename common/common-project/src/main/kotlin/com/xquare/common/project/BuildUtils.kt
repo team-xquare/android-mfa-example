@@ -1,6 +1,6 @@
-package com.xquare.core.common.util
+package com.xquare.common.project
 
-import com.xquare.core.common.di.DiQualifier
+import com.xquare.common.di.DiQualifier
 import org.koin.core.qualifier.named
 import org.koin.java.KoinJavaComponent.get
 
@@ -9,3 +9,4 @@ val isDebugEnabled: Boolean
         clazz = Boolean::class.java,
         qualifier = named(DiQualifier.Build.DEBUG),
     )
+
