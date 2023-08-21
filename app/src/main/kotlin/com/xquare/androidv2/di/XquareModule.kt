@@ -7,6 +7,8 @@ import com.xquare.core.common.di.commonModule
 import com.xquare.core.database.di.databaseModule
 import com.xquare.core.datastore.di.dataStoreModule
 import com.xquare.core.network.di.networkModule
+import com.xquare.domain.meal.di.mealDomainModule
+import com.xquare.domain.user.di.userDomainModule
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.Module
@@ -35,4 +37,9 @@ private val coreModule: Module
     }
 
 private val domainModule: Module
-    get() = module {}
+    get() = module {
+        includes(
+            mealDomainModule,
+            userDomainModule,
+        )
+    }
