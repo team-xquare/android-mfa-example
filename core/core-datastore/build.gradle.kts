@@ -38,5 +38,7 @@ dependencies {
         Libraries.Datastore.DATASTORE_PREFERENCES,
         Libraries.Kotlin.DATETIME,
     )
-    implementation(project(":core:core-common"))
+    implementation(project(":common:common-date"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
 }
