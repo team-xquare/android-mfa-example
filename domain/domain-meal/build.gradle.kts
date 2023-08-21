@@ -43,6 +43,7 @@ dependencies {
     implementation(
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
+        Libraries.Ktor.KTOR,
         Libraries.Koin.KOIN,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
