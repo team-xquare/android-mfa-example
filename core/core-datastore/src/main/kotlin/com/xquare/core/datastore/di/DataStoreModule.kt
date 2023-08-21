@@ -1,6 +1,6 @@
 package com.xquare.core.datastore.di
 
-import com.xquare.core.common.di.DiQualifier
+import com.xquare.common.di.DiQualifier
 import com.xquare.core.datastore.datasource.UserPreferencesDataSource
 import com.xquare.core.datastore.datasource.UserPreferencesDataSourceImpl
 import com.xquare.core.datastore.preferencesDatastore
