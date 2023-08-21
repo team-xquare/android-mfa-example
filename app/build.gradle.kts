@@ -16,6 +16,9 @@ android {
         targetSdk = AndroidConfig.Sdk.TARGET_SDK
         versionCode = AndroidConfig.AppVersion.VERSION_CODE
         versionName = AndroidConfig.AppVersion.VERSION_NAME
+
+        buildConfigField("String", "BASE_URL_PROD", AndroidConfig.Http.BASE_URL_PROD)
+        buildConfigField("String", "BASE_URL_STAG", AndroidConfig.Http.BASE_URL_STAG)
     }
     buildTypes {
         release {
