@@ -11,4 +11,8 @@ object DiQualifier {
     object Build {
         const val DEBUG = "debug"
     }
+
+    object Http {
+        const val BASE_URL = "base_url"
+    }
 }
