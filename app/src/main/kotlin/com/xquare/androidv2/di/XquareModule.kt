@@ -14,7 +14,11 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 internal val xquareModule = module {
-    includes(coreModule)
+    includes(
+        coreModule,
+        domainModule,
+        httpModule,
+    )
     single(qualifier = named(DiQualifier.Build.DEBUG)) { BuildConfig.DEBUG }
     viewModel { RootViewModel() }
     viewModelOf(::RootViewModel)
@@ -29,3 +33,6 @@ private val coreModule: Module
             networkModule,
         )
     }
+
+private val domainModule: Module
+    get() = module {}
