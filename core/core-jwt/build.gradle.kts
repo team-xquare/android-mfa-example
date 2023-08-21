@@ -43,6 +43,7 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Datastore.DATASTORE_PREFERENCES,
         Libraries.Kotlin.DATETIME,
     )
     implementation(project(":common:common-date"))
