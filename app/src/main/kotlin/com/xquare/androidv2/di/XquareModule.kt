@@ -5,6 +5,7 @@ import com.xquare.androidv2.RootViewModel
 import com.xquare.common.di.DiQualifier
 import com.xquare.core.database.di.databaseModule
 import com.xquare.core.datastore.di.dataStoreModule
+import com.xquare.core.jwt.di.jwtModule
 import com.xquare.core.network.di.networkModule
 import com.xquare.domain.meal.di.mealDomainModule
 import com.xquare.domain.user.di.userDomainModule
@@ -30,6 +31,7 @@ private val coreModule: Module
         includes(
             databaseModule,
             dataStoreModule,
+            jwtModule,
             networkModule,
         )
     }
