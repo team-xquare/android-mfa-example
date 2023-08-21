@@ -44,4 +44,7 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
     )
+    implementation(project(":common:common-date"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
 }
