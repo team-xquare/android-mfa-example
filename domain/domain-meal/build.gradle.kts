@@ -3,6 +3,7 @@ plugins {
         Plugins.LIBRARY_ANDROID,
         Plugins.KOTLIN_ANDROID,
         Plugins.KAPT,
+        Plugins.KOTLIN_SERIALIZATION,
     )
 }
 
@@ -43,5 +44,6 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Koin.KOIN,
+        Libraries.Kotlin.SERIALIZATION_JSON,
     )
 }
