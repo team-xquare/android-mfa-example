@@ -1,8 +1,8 @@
 package com.xquare.core.network.client
 
 import android.util.Log
-import com.xquare.core.common.di.DiQualifier
-import com.xquare.core.common.util.isDebugEnabled
+import com.xquare.common.di.DiQualifier
+import com.xquare.common.project.isDebugEnabled
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
