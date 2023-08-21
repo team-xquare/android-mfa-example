@@ -38,7 +38,7 @@ internal val httpClient = HttpClient(CIO) {
             urlString = get(
                 clazz = String::class.java,
                 qualifier = named(DiQualifier.Http.BASE_URL),
-            )
+            ),
         )
     }
 }

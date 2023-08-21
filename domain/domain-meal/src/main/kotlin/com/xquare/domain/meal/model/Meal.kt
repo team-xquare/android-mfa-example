@@ -35,4 +35,3 @@ internal fun MealEntity.asExternalModel() = Meal(
     dinner = this.dinner,
     kcalOfDinner = this.kcalOfDinner,
 )
-
