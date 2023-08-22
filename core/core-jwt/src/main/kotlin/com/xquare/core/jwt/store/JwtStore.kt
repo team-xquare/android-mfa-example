@@ -1,23 +1,22 @@
 package com.xquare.core.jwt.store
 
+import com.xquare.core.jwt.`typealias`.AccessToken
+import com.xquare.core.jwt.`typealias`.AccessTokenExpiration
+import com.xquare.core.jwt.`typealias`.RefreshToken
+import com.xquare.core.jwt.`typealias`.RefreshTokenExpiration
 import kotlinx.coroutines.flow.Flow
-import kotlinx.datetime.Instant
-
-// todo typealias 분리
-typealias Token = String
-typealias Expiration = Instant
 
 interface JwtStore {
-    fun loadAccessToken(): Flow<Token>
-    suspend fun storeAccessToken(token: Token)
+    fun loadAccessToken(): Flow<AccessToken>
+    suspend fun storeAccessToken(token: AccessToken)
     suspend fun clearAccessToken()
-    fun loadAccessTokenExpiration(): Flow<Expiration>
-    suspend fun storeAccessTokenExpiration(expiration: Expiration)
+    fun loadAccessTokenExpiration(): Flow<AccessTokenExpiration>
+    suspend fun storeAccessTokenExpiration(expiration: AccessTokenExpiration)
     suspend fun clearAccessTokenExpiration()
-    fun loadRefreshToken(): Flow<Token>
-    suspend fun storeRefreshToken(token: Token)
+    fun loadRefreshToken(): Flow<RefreshToken>
+    suspend fun storeRefreshToken(token: RefreshToken)
     suspend fun clearRefreshToken()
-    fun loadRefreshTokenExpiration(): Flow<Expiration>
-    suspend fun storeRefreshTokenExpiration(expiration: Expiration)
+    fun loadRefreshTokenExpiration(): Flow<RefreshTokenExpiration>
+    suspend fun storeRefreshTokenExpiration(expiration: RefreshTokenExpiration)
     suspend fun clearRefreshTokenExpiration()
 }

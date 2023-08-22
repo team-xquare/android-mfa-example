@@ -9,6 +9,10 @@ import com.xquare.core.jwt.exception.AccessTokenExpirationNotFoundException
 import com.xquare.core.jwt.exception.AccessTokenNotFoundException
 import com.xquare.core.jwt.exception.RefreshTokenExpirationNotFoundException
 import com.xquare.core.jwt.exception.RefreshTokenNotFoundException
+import com.xquare.core.jwt.`typealias`.AccessToken
+import com.xquare.core.jwt.`typealias`.AccessTokenExpiration
+import com.xquare.core.jwt.`typealias`.RefreshToken
+import com.xquare.core.jwt.`typealias`.RefreshTokenExpiration
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.Instant
@@ -16,13 +20,13 @@ import kotlinx.datetime.Instant
 internal class JwtStoreImpl(
     private val dataStore: DataStore<Preferences>,
 ) : JwtStore {
-    override fun loadAccessToken(): Flow<Token> {
+    override fun loadAccessToken(): Flow<AccessToken> {
         return dataStore.data.map { preferences ->
             preferences[KEY_ACCESS_TOKEN] ?: throw AccessTokenNotFoundException()
         }
     }
 
-    override suspend fun storeAccessToken(token: Token) {
+    override suspend fun storeAccessToken(token: AccessToken) {
         dataStore.edit { preferences ->
             preferences[KEY_ACCESS_TOKEN] = token
         }
@@ -34,7 +38,7 @@ internal class JwtStoreImpl(
         }
     }
 
-    override fun loadAccessTokenExpiration(): Flow<Expiration> {
+    override fun loadAccessTokenExpiration(): Flow<AccessTokenExpiration> {
         return dataStore.data.map { preferences ->
             val epochTime = preferences[KEY_ACCESS_TOKEN_EXPIRATION]
                 ?: throw AccessTokenExpirationNotFoundException()
@@ -42,7 +46,7 @@ internal class JwtStoreImpl(
         }
     }
 
-    override suspend fun storeAccessTokenExpiration(expiration: Expiration) {
+    override suspend fun storeAccessTokenExpiration(expiration: AccessTokenExpiration) {
         dataStore.edit { preferences ->
             preferences[KEY_ACCESS_TOKEN_EXPIRATION] = expiration.epochSeconds
         }
@@ -54,13 +58,13 @@ internal class JwtStoreImpl(
         }
     }
 
-    override fun loadRefreshToken(): Flow<Token> {
+    override fun loadRefreshToken(): Flow<RefreshToken> {
         return dataStore.data.map { preferences ->
             preferences[KEY_REFRESH_TOKEN] ?: throw RefreshTokenNotFoundException()
         }
     }
 
-    override suspend fun storeRefreshToken(token: Token) {
+    override suspend fun storeRefreshToken(token: RefreshToken) {
         dataStore.edit { preferences ->
             preferences[KEY_REFRESH_TOKEN] = token
         }
@@ -72,7 +76,7 @@ internal class JwtStoreImpl(
         }
     }
 
-    override fun loadRefreshTokenExpiration(): Flow<Expiration> {
+    override fun loadRefreshTokenExpiration(): Flow<RefreshTokenExpiration> {
         return dataStore.data.map { preferences ->
             val epochTime = preferences[KEY_REFRESH_TOKEN_EXPIRATION]
                 ?: throw RefreshTokenExpirationNotFoundException()
@@ -80,7 +84,7 @@ internal class JwtStoreImpl(
         }
     }
 
-    override suspend fun storeRefreshTokenExpiration(expiration: Expiration) {
+    override suspend fun storeRefreshTokenExpiration(expiration: RefreshTokenExpiration) {
         dataStore.edit { preferences ->
             preferences[KEY_REFRESH_TOKEN_EXPIRATION] = expiration.epochSeconds
         }
