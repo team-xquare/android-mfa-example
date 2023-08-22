@@ -1,5 +1,6 @@
 package com.xquare.common.di
 
+// todo di qualifier 분리 고민
 object DiQualifier {
     object Authorization {
         const val ACCESS_TOKEN = "access_token"
