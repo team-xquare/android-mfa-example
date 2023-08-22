@@ -51,5 +51,6 @@ dependencies {
     )
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
+    implementation(project(":core:core-jwt"))
     implementation(project(":core:core-network"))
 }
