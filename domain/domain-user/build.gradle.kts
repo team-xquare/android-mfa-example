@@ -44,8 +44,8 @@ dependencies {
         Libraries.Android.CORE,
         Libraries.Android.APPCOMPAT,
         Libraries.Ktor.KTOR,
-        Libraries.Koin.KOIN,
         Libraries.Datastore.DATASTORE_PREFERENCES,
+        Libraries.Koin.KOIN,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
     )
@@ -53,4 +53,5 @@ dependencies {
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-jwt"))
     implementation(project(":core:core-network"))
+    implementation(project(":common:common-di"))
 }
