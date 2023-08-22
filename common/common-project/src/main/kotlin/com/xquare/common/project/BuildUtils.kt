@@ -9,3 +9,9 @@ val isDebugEnabled: Boolean
         clazz = Boolean::class.java,
         qualifier = named(DiQualifier.Build.DEBUG),
     )
+
+val baseUrl: String
+    inline get() = get(
+        clazz = Boolean::class.java,
+        qualifier = named(DiQualifier.Http.BASE_URL),
+    )
