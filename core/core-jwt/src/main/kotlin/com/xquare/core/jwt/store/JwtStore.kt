@@ -1,5 +1,6 @@
 package com.xquare.core.jwt.store
 
+import com.xquare.core.jwt.Tokens
 import com.xquare.core.jwt.`typealias`.AccessToken
 import com.xquare.core.jwt.`typealias`.AccessTokenExpiration
 import com.xquare.core.jwt.`typealias`.RefreshToken
@@ -19,4 +20,9 @@ interface JwtStore {
     fun loadRefreshTokenExpiration(): Flow<RefreshTokenExpiration>
     suspend fun storeRefreshTokenExpiration(expiration: RefreshTokenExpiration)
     suspend fun clearRefreshTokenExpiration()
+
+    // todo Tokens 클래스 사용하는 메서드 위치 고민하기 (예: JwtFacade)
+    suspend fun loadTokens(): Flow<Tokens>
+    suspend fun storeTokens(tokens: Tokens)
+    suspend fun clearTokens()
 }
