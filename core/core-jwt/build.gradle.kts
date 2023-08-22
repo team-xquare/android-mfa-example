@@ -28,10 +28,6 @@ android {
         targetCompatibility = AndroidConfig.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
-    buildFeatures {
-        viewBinding = true
-        compose = true
-    }
     composeOptions {
         kotlinCompilerExtensionVersion =
             AndroidConfig.ComposeOptions.VERSION_KOTLIN_COMPILER_EXTENSION
