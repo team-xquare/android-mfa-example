@@ -23,6 +23,7 @@ include(
     ":common:common-date",
     ":common:common-di",
     ":common:common-project",
+    ":common:common-typealias",
     ":core:core-database",
     ":core:core-datastore",
     ":core:core-jwt",
