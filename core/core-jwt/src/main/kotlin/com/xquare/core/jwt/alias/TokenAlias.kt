@@ -1,4 +1,4 @@
-package com.xquare.core.jwt.`typealias`
+package com.xquare.core.jwt.alias
 
 import kotlinx.datetime.Instant
 

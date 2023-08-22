@@ -1,10 +1,10 @@
 package com.xquare.core.jwt.store
 
 import com.xquare.core.jwt.Tokens
-import com.xquare.core.jwt.`typealias`.AccessToken
-import com.xquare.core.jwt.`typealias`.AccessTokenExpiration
-import com.xquare.core.jwt.`typealias`.RefreshToken
-import com.xquare.core.jwt.`typealias`.RefreshTokenExpiration
+import com.xquare.core.jwt.alias.AccessToken
+import com.xquare.core.jwt.alias.AccessTokenExpiration
+import com.xquare.core.jwt.alias.RefreshToken
+import com.xquare.core.jwt.alias.RefreshTokenExpiration
 import kotlinx.coroutines.flow.Flow
 
 interface JwtStore {
