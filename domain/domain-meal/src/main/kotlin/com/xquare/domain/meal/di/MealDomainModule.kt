@@ -13,8 +13,20 @@ import org.koin.dsl.module
 
 val mealDomainModule: Module
     get() = module {
+        includes(
+            dataSourceModule,
+            useCaseModule,
+        )
+    }
+
+private val dataSourceModule: Module
+    get() = module {
         single<MealDatabaseDataSource> { MealDatabaseDataSourceImpl(get()) }
         single<MealDataStoreDataSource> { MealDataStoreDataSourceImpl(get()) }
         single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
         single<MealApiService> { MealApiServiceImpl(get()) }
+    }
+
+private val useCaseModule: Module
+    get() = module {
     }
