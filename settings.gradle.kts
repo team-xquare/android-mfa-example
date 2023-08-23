@@ -27,6 +27,7 @@ include(
     ":core:core-datastore",
     ":core:core-jwt",
     ":core:core-network",
+    ":core:core-role",
     ":core:core-ui",
     ":domain:domain-meal",
     ":domain:domain-user",
