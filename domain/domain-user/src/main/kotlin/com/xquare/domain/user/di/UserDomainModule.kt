@@ -43,5 +43,5 @@ private val dataSourceModule: Module
 
 private val useCaseModule: Module
     get() = module {
-        single { LoginUseCase(get()) }
+        single { LoginUseCase(get(), get()) }
     }
