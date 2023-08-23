@@ -7,6 +7,7 @@ import com.xquare.core.database.di.databaseModule
 import com.xquare.core.datastore.di.dataStoreModule
 import com.xquare.core.jwt.di.jwtModule
 import com.xquare.core.network.di.networkModule
+import com.xquare.core.role.di.roleModule
 import com.xquare.domain.meal.di.mealDomainModule
 import com.xquare.domain.user.di.userDomainModule
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -33,6 +34,7 @@ private val coreModule: Module
             dataStoreModule,
             jwtModule,
             networkModule,
+            roleModule,
         )
     }
 
