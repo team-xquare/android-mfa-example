@@ -1,4 +1,4 @@
-package com.xquare.domain.user.datasource.network.apiservice
+package com.xquare.domain.user.datasource.network.service
 
 import com.xquare.domain.user.model.input.LoginInput
 import com.xquare.domain.user.model.input.RegisterInput
@@ -9,10 +9,10 @@ import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 
 // todo 내부 로직 재구현 필요
-internal class UserApiServiceImpl(
+internal class UserNetworkServiceImpl(
     private val httpClient: HttpClient,
     override val baseUri: String,
-) : UserApiService {
+) : UserNetworkService {
     override suspend fun register(input: RegisterInput) {
         httpClient.post { setBody(input) }
     }

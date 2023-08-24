@@ -7,8 +7,8 @@ import com.xquare.domain.user.datasource.datastore.UserDataStoreDataSource
 import com.xquare.domain.user.datasource.datastore.UserDataStoreDataSourceImpl
 import com.xquare.domain.user.datasource.network.UserNetworkDataSource
 import com.xquare.domain.user.datasource.network.UserNetworkDataSourceImpl
-import com.xquare.domain.user.datasource.network.apiservice.UserApiService
-import com.xquare.domain.user.datasource.network.apiservice.UserApiServiceImpl
+import com.xquare.domain.user.datasource.network.service.UserNetworkService
+import com.xquare.domain.user.datasource.network.service.UserNetworkServiceImpl
 import com.xquare.domain.user.repository.UserRepository
 import com.xquare.domain.user.repository.UserRepositoryImpl
 import com.xquare.domain.user.usecase.LoginUseCase
@@ -31,10 +31,10 @@ private val dataSourceModule: Module
         single<UserDataStoreDataSource> { UserDataStoreDataSourceImpl() }
         single<UserNetworkDataSource> { UserNetworkDataSourceImpl(get()) }
 
-        single<UserApiService> {
+        single<UserNetworkService> {
             val baseUri = "$baseUrl/users"
 
-            UserApiServiceImpl(
+            UserNetworkServiceImpl(
                 httpClient = get(),
                 baseUri = baseUri,
             )
