@@ -42,8 +42,12 @@ dependencies {
         Libraries.Ktor.KTOR,
         Libraries.Datastore.DATASTORE_PREFERENCES,
         Libraries.Koin.KOIN,
+        Libraries.Room.ROOM,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
+    )
+    kapt(
+        Libraries.Room.ROOM_COMPILER,
     )
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
