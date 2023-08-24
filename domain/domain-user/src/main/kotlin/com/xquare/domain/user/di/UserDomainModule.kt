@@ -22,7 +22,7 @@ val userDomainModule: Module
             useCaseModule,
         )
 
-        single<UserRepository> { UserRepositoryImpl(get(), get(), get()) }
+        single<UserRepository> { UserRepositoryImpl(get(), get(), get(), get(), get()) }
     }
 
 private val dataSourceModule: Module
@@ -43,5 +43,5 @@ private val dataSourceModule: Module
 
 private val useCaseModule: Module
     get() = module {
-        single { LoginUseCase(get(), get(), get()) }
+        single { LoginUseCase(get()) }
     }
