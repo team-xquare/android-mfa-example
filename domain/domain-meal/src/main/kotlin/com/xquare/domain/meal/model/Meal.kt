@@ -6,7 +6,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-internal data class Meal(
+data class Meal(
     @SerialName("date") val date: LocalDate,
     @SerialName("breakfast") val breakfast: List<String>,
     @SerialName("breakfast_kcal") val kcalOfBreakfast: String,
