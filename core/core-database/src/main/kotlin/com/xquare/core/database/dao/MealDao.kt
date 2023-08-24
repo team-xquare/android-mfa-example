@@ -25,6 +25,16 @@ interface MealDao {
     @Transaction
     @Query(
         """
+            SELECT *
+            FROM tbl_meal
+            WHERE strftime('%Y', date) = :year AND strftime('%m', date) = :month; 
+        """,
+    )
+    fun findAllByYearAndMonth(year:Int, month:Int): Flow<List<MealEntity>>
+
+    @Transaction
+    @Query(
+        """
             SELECT * 
             FROM tbl_meal 
             WHERE date BETWEEN :from AND :to;
@@ -57,6 +67,25 @@ interface MealDao {
         """,
     )
     fun deleteByDate(date: LocalDate)
+
+    @Transaction
+    @Query(
+        """
+            DELETE FROM tbl_meal
+            WHERE date BETWEEN :from AND :to;
+        """,
+    )
+    fun deleteAllByDateBetween(from: LocalDate, to: LocalDate)
+
+
+    @Transaction
+    @Query(
+        """
+            DELETE FROM tbl_meal
+            WHERE strftime('%Y', date) = :year AND strftime('%m', date) = :month; 
+        """,
+    )
+    fun deleteAllByYearAndMonth(year:Int, month: Int)
 
     @Transaction
     @Query(
