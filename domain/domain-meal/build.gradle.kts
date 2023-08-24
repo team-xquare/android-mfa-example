@@ -37,9 +37,13 @@ dependencies {
         Libraries.Android.APPCOMPAT,
         Libraries.Ktor.KTOR,
         Libraries.Koin.KOIN,
+        Libraries.Room.ROOM,
         Libraries.Datastore.DATASTORE_PREFERENCES,
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
+    )
+    kapt(
+        Libraries.Room.ROOM_COMPILER,
     )
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
