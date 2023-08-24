@@ -17,6 +17,6 @@ import com.xquare.core.database.util.InstantConverter
 @TypeConverters(
     InstantConverter::class,
 )
-internal abstract class XquareDatabase : RoomDatabase() {
+abstract class XquareDatabase : RoomDatabase() {
     abstract fun mealDao(): MealDao
 }
