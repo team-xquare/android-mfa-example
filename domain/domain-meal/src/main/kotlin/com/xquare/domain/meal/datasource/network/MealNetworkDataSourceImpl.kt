@@ -10,6 +10,6 @@ internal class MealNetworkDataSourceImpl(
     override suspend fun fetchMeal(date: LocalDate): Meal =
         mealApiService.fetchMeal(date)
 
-    override suspend fun fetchMealOfMonth(date: LocalDate): List<Meal> =
-        mealApiService.fetchMealOfMonth(date)
+    override suspend fun fetchMealsByYearAndMonth(year: Int, month: Int): List<Meal> =
+        mealApiService.fetchMealByYearAndMonth(year, month)
 }
