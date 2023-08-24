@@ -6,6 +6,5 @@ import com.xquare.domain.user.model.output.AuthOutput
 
 interface UserRepository {
     suspend fun register(input: RegisterInput)
-    suspend fun login(input: LoginInput): AuthOutput
-    suspend fun reissueToken(): AuthOutput
+    suspend fun login(input: LoginInput)
 }
