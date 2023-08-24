@@ -15,12 +15,12 @@ internal class MealApiServiceImpl(
         url { path(baseUri, date.toString()) }
     }.body()
 
-    override suspend fun fetchMealOfMonth(date: LocalDate): List<Meal> = httpClient.get {
+    override suspend fun fetchMealByYearAndMonth(year: Int, month: Int): List<Meal> = httpClient.get {
         url {
             path(baseUri)
             parameters.run {
-                append("year", date.year.toString())
-                append("month", date.monthNumber.toString())
+                append("year", year.toString())
+                append("month", month.toString())
             }
         }
     }.body()
