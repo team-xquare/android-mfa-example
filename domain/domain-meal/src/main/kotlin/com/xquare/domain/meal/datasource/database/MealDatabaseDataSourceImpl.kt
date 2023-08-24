@@ -12,13 +12,16 @@ import kotlinx.datetime.LocalDate
 internal class MealDatabaseDataSourceImpl(
     private val mealDao: MealDao,
 ) : MealDatabaseDataSource {
-    override fun fetchMeal(date: LocalDate): Flow<Meal> =
+    override fun queryMealByDate(date: LocalDate): Flow<Meal> =
         mealDao.findByDate(date).map(MealEntity::asExternalModel)
 
-    override fun fetchMealsWithTerm(from: LocalDate, to: LocalDate): Flow<List<Meal>> =
+    override fun queryMealsByYearAndMonth(year: Int, month: Int): Flow<List<Meal>> =
+        mealDao.findAllByYearAndMonth(year, month).map { it.map(MealEntity::asExternalModel) }
+
+    override fun queryMealsBetween(from: LocalDate, to: LocalDate): Flow<List<Meal>> =
         mealDao.findByDateBetween(from, to).map { it.map(MealEntity::asExternalModel) }
 
-    override fun fetchAllMeals(): Flow<List<Meal>> =
+    override fun queryAllMeals(): Flow<List<Meal>> =
         mealDao.findAll().map { it.map(MealEntity::asExternalModel) }
 
     override fun saveMeal(meal: Meal) = mealDao.save(meal.asDatabaseEntity())
@@ -26,6 +29,11 @@ internal class MealDatabaseDataSourceImpl(
     override fun saveAllMeals(meal: List<Meal>) = mealDao.saveAll(meal.map(Meal::asDatabaseEntity))
 
     override fun deleteMealByDate(date: LocalDate) = mealDao.deleteByDate(date)
+    override fun deleteMealsByYearAndMonth(year: Int, month: Int) =
+        mealDao.deleteAllByYearAndMonth(year, month)
+
+    override fun deleteMealsBetween(from: LocalDate, to: LocalDate) =
+        mealDao.deleteAllByDateBetween(from, to)
 
     override fun deleteAllMeals() = mealDao.deleteAll()
 }
