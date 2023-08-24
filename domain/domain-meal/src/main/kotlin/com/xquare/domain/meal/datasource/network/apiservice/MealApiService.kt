@@ -6,5 +6,5 @@ import kotlinx.datetime.LocalDate
 
 internal interface MealApiService : BaseApiService {
     suspend fun fetchMeal(date: LocalDate): Meal
-    suspend fun fetchMealOfMonth(date: LocalDate): List<Meal>
+    suspend fun fetchMealByYearAndMonth(year: Int, month: Int): List<Meal>
 }
