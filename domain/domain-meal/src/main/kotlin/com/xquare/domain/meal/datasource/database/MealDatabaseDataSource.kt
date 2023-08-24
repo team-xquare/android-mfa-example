@@ -5,11 +5,14 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDate
 
 internal interface MealDatabaseDataSource {
-    fun fetchMeal(date: LocalDate): Flow<Meal>
-    fun fetchMealsWithTerm(from: LocalDate, to: LocalDate): Flow<List<Meal>>
-    fun fetchAllMeals(): Flow<List<Meal>>
+    fun queryMealByDate(date: LocalDate): Flow<Meal>
+    fun queryMealsByYearAndMonth(year: Int, month: Int): Flow<List<Meal>>
+    fun queryMealsBetween(from: LocalDate, to: LocalDate): Flow<List<Meal>>
+    fun queryAllMeals(): Flow<List<Meal>>
     fun saveMeal(meal: Meal)
     fun saveAllMeals(meal: List<Meal>)
     fun deleteMealByDate(date: LocalDate)
+    fun deleteMealsByYearAndMonth(year: Int, month: Int)
+    fun deleteMealsBetween(from: LocalDate, to: LocalDate)
     fun deleteAllMeals()
 }
