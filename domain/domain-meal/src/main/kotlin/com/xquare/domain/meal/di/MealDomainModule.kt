@@ -6,8 +6,8 @@ import com.xquare.domain.meal.datasource.datastore.MealDataStoreDataSource
 import com.xquare.domain.meal.datasource.datastore.MealDataStoreDataSourceImpl
 import com.xquare.domain.meal.datasource.network.MealNetworkDataSource
 import com.xquare.domain.meal.datasource.network.MealNetworkDataSourceImpl
-import com.xquare.domain.meal.datasource.network.apiservice.MealApiService
-import com.xquare.domain.meal.datasource.network.apiservice.MealApiServiceImpl
+import com.xquare.domain.meal.datasource.network.service.MealNetworkService
+import com.xquare.domain.meal.datasource.network.service.MealNetworkServiceImpl
 import com.xquare.domain.meal.repository.MealRepository
 import com.xquare.domain.meal.repository.MealRepositoryImpl
 import org.koin.core.module.Module
@@ -28,7 +28,7 @@ private val dataSourceModule: Module
         single<MealDatabaseDataSource> { MealDatabaseDataSourceImpl(get()) }
         single<MealDataStoreDataSource> { MealDataStoreDataSourceImpl(get()) }
         single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
-        single<MealApiService> { MealApiServiceImpl(get()) }
+        single<MealNetworkService> { MealNetworkServiceImpl(get()) }
     }
 
 private val useCaseModule: Module

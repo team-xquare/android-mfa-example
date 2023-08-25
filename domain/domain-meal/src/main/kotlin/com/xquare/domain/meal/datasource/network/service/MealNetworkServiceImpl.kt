@@ -1,4 +1,4 @@
-package com.xquare.domain.meal.datasource.network.apiservice
+package com.xquare.domain.meal.datasource.network.service
 
 import com.xquare.domain.meal.model.Meal
 import io.ktor.client.HttpClient
@@ -7,10 +7,10 @@ import io.ktor.client.request.get
 import io.ktor.http.path
 import kotlinx.datetime.LocalDate
 
-internal class MealApiServiceImpl(
+internal class MealNetworkServiceImpl(
     private val httpClient: HttpClient,
     override val baseUri: String = "meals",
-) : MealApiService {
+) : MealNetworkService {
     override suspend fun fetchMeal(date: LocalDate): Meal = httpClient.get {
         url { path(baseUri, date.toString()) }
     }.body()
