@@ -23,7 +23,7 @@ internal class MainFragment : Fragment(R.layout.fragment_services_main) {
         get() = context.measuredSystemNavigationBarHeight
 
     private val navHostFragment: NavHostFragment
-        get() = childFragmentManager.findFragmentById(R.id.nav_host_fragment_content_services_main) as NavHostFragment
+        get() = childFragmentManager.findFragmentById(R.id.nav_host_services_main) as NavHostFragment
     private val navController: NavController
         get() = navHostFragment.navController
 
@@ -41,7 +41,7 @@ internal class MainFragment : Fragment(R.layout.fragment_services_main) {
     }
 
     private fun initBottomNavigation() {
-        binding.includedLayoutServicesMain.bottomNavigationServicesMain.run {
+        binding.includedLayoutServicesMain.bottomNav.run {
             setPadding(0, 0, 0, systemNavigationHeight)
             setupWithNavController(navController)
         }
