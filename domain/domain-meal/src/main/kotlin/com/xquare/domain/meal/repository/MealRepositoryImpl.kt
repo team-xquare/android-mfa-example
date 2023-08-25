@@ -1,5 +1,7 @@
 package com.xquare.domain.meal.repository
 
+import com.xquare.core.jwt.store.JwtStore
+import com.xquare.core.role.store.RoleStore
 import com.xquare.domain.meal.datasource.database.MealDatabaseDataSource
 import com.xquare.domain.meal.datasource.datastore.MealDataStoreDataSource
 import com.xquare.domain.meal.datasource.network.MealNetworkDataSource
