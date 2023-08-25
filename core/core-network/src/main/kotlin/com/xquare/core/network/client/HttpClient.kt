@@ -1,7 +1,8 @@
 package com.xquare.core.network.client
 
 import android.util.Log
-import com.xquare.core.common.util.isDebugEnabled
+import com.xquare.common.di.DiQualifier
+import com.xquare.common.project.isDebugEnabled
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -13,6 +14,8 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
+import org.koin.core.qualifier.named
+import org.koin.java.KoinJavaComponent.get
 
 internal val httpClient = HttpClient(CIO) {
     expectSuccess = true
@@ -32,15 +35,10 @@ internal val httpClient = HttpClient(CIO) {
     defaultRequest {
         contentType(ContentType.Application.Json)
         url(
-            urlString = PROD_BASE_URL,
-            /*urlString = if (isDebugEnabled) {
-                STAG_BASE_URL
-            } else {
-                PROD_BASE_URL
-            },*/
+            urlString = get(
+                clazz = String::class.java,
+                qualifier = named(DiQualifier.Http.BASE_URL),
+            ),
         )
     }
 }
-
-private const val PROD_BASE_URL = "https://api.xquare.app"
-private const val STAG_BASE_URL = "https://stag-api.xquare.app"

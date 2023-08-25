@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDate
 
 @Dao
-internal interface MealDao {
+interface MealDao {
 
     @Transaction
     @Query(
@@ -21,6 +21,16 @@ internal interface MealDao {
         """,
     )
     fun findByDate(date: LocalDate): Flow<MealEntity>
+
+    @Transaction
+    @Query(
+        """
+            SELECT *
+            FROM tbl_meal
+            WHERE strftime('%Y', date) = :year AND strftime('%m', date) = :month; 
+        """,
+    )
+    fun findAllByYearAndMonth(year: Int, month: Int): Flow<List<MealEntity>>
 
     @Transaction
     @Query(
@@ -57,6 +67,24 @@ internal interface MealDao {
         """,
     )
     fun deleteByDate(date: LocalDate)
+
+    @Transaction
+    @Query(
+        """
+            DELETE FROM tbl_meal
+            WHERE date BETWEEN :from AND :to;
+        """,
+    )
+    fun deleteAllByDateBetween(from: LocalDate, to: LocalDate)
+
+    @Transaction
+    @Query(
+        """
+            DELETE FROM tbl_meal
+            WHERE strftime('%Y', date) = :year AND strftime('%m', date) = :month; 
+        """,
+    )
+    fun deleteAllByYearAndMonth(year: Int, month: Int)
 
     @Transaction
     @Query(

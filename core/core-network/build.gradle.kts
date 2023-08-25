@@ -45,7 +45,7 @@ dependencies {
         Libraries.Kotlin.DATETIME,
         Libraries.Kotlin.SERIALIZATION_JSON,
     )
-    implementation(project(":core:core-common"))
-    implementation(project(":core:core-exception"))
-    implementation(project(":core:core-model"))
+    implementation(project(":common:common-date"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
 }

@@ -16,6 +16,9 @@ android {
         targetSdk = AndroidConfig.Sdk.TARGET_SDK
         versionCode = AndroidConfig.AppVersion.VERSION_CODE
         versionName = AndroidConfig.AppVersion.VERSION_NAME
+
+        buildConfigField("String", "BASE_URL_PROD", '\"' + AndroidConfig.Http.BASE_URL_PROD + '\"')
+        buildConfigField("String", "BASE_URL_STAG", '\"' + AndroidConfig.Http.BASE_URL_STAG + '\"')
     }
     buildTypes {
         release {
@@ -62,14 +65,17 @@ dependencies {
     )
 
     // todo implement function receives vararg params
-    implementation(project(":core:core-common"))
-    implementation(project(":core:core-data"))
+    implementation(project(":common:common-date"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
-    implementation(project(":core:core-exception"))
-    implementation(project(":core:core-model"))
+    implementation(project(":core:core-jwt"))
     implementation(project(":core:core-network"))
+    implementation(project(":core:core-role"))
     implementation(project(":core:core-ui"))
+    implementation(project(":domain:domain-meal"))
+    implementation(project(":domain:domain-user"))
     implementation(project(":feature:feature-allservices"))
     implementation(project(":feature:feature-application"))
     implementation(project(":feature:feature-feed"))
