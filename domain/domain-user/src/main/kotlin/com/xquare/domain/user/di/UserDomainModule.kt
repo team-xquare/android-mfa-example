@@ -39,11 +39,9 @@ private val dataSourceModule: Module
 
         single<UserNetworkDataSource> { UserNetworkDataSourceImpl(get()) }
         single<UserNetworkService> {
-            val baseUri = "$baseUrl/users"
-
             UserNetworkServiceImpl(
                 httpClient = get(),
-                baseUri = baseUri,
+                baseUri = "$baseUrl/users",
             )
         }
     }
