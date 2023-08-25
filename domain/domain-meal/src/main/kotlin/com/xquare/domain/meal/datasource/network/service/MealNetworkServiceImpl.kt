@@ -9,19 +9,20 @@ import kotlinx.datetime.LocalDate
 
 internal class MealNetworkServiceImpl(
     private val httpClient: HttpClient,
-    override val baseUri: String = "meals",
+    override val baseUri: String,
 ) : MealNetworkService {
     override suspend fun fetchMeal(date: LocalDate): Meal = httpClient.get {
         url { path(baseUri, date.toString()) }
     }.body()
 
-    override suspend fun fetchMealByYearAndMonth(year: Int, month: Int): List<Meal> = httpClient.get {
-        url {
-            path(baseUri)
-            parameters.run {
-                append("year", year.toString())
-                append("month", month.toString())
+    override suspend fun fetchMealByYearAndMonth(year: Int, month: Int): List<Meal> =
+        httpClient.get {
+            url {
+                path(baseUri)
+                parameters.run {
+                    append("year", year.toString())
+                    append("month", month.toString())
+                }
             }
-        }
-    }.body()
+        }.body()
 }
