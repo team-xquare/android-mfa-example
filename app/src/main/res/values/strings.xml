@@ -9,11 +9,11 @@
     <string name="bottom_nav_item_title_services_main_all_services">전체</string>
 
     <!--features-->
-    <string name="all_services">전체</string>
-    <string name="application">신청</string>
-    <string name="auth">인증</string>
-    <string name="feed">피드</string>
-    <string name="home">홈</string>
-    <string name="my_page">마이페이지</string>
-    <string name="schedule">일정</string>
+    <string name="feature_all_services">전체</string>
+    <string name="feature_application">신청</string>
+    <string name="feature_auth">인증</string>
+    <string name="feature_feed">피드</string>
+    <string name="feature_home">홈</string>
+    <string name="feature_my_page">마이페이지</string>
+    <string name="feature_schedule">일정</string>
 </resources>
