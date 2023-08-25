@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">XQUARE</string>
 
-    <!--bottom nav item title-->
+    <!--bottom nav item titles-->
     <string name="bottom_nav_item_title_services_main_home">홈</string>
     <string name="bottom_nav_item_title_services_main_schedule">일정</string>
     <string name="bottom_nav_item_title_services_main_feed">피드</string>
