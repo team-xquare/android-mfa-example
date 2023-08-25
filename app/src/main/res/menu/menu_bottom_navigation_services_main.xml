@@ -4,26 +4,26 @@
     <item
         android:id="@+id/fragment_services_main_home"
         android:icon="@drawable/selector_bottom_navigation_ic_home"
-        android:title="@string/services_main_home" />
+        android:title="@string/bottom_nav_item_title_services_main_home" />
 
     <item
         android:id="@+id/fragment_services_main_schedule"
         android:icon="@drawable/selector_bottom_navigation_ic_schedule"
-        android:title="@string/services_main_schedule" />
+        android:title="@string/bottom_nav_item_title_services_main_schedule" />
 
     <item
         android:id="@+id/fragment_services_main_feed"
         android:icon="@drawable/selector_bottom_navigation_ic_feed"
-        android:title="@string/services_main_feed" />
+        android:title="@string/bottom_nav_item_title_services_main_feed" />
 
     <item
         android:id="@+id/fragment_services_main_application"
         android:icon="@drawable/selector_bottom_navigation_ic_application"
-        android:title="@string/services_main_application" />
+        android:title="@string/bottom_nav_item_title_services_main_application" />
 
     <item
         android:id="@+id/fragment_services_main_all_services"
         android:icon="@drawable/selector_bottom_navigation_ic_all_services"
-        android:title="@string/services_main_all_services" />
+        android:title="@string/bottom_nav_item_title_services_main_all_services" />
 
 </menu>
