@@ -48,4 +48,6 @@ dependencies {
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-network"))
+    implementation(project(":common:common-di"))
+    implementation(project(":common:common-project"))
 }
