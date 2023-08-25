@@ -15,6 +15,8 @@ internal class MealRepositoryImpl(
     private val mealDatabaseDataSource: MealDatabaseDataSource,
     private val mealDataStoreDataSource: MealDataStoreDataSource,
     private val mealNetworkDataSource: MealNetworkDataSource,
+    private val jwtStore: JwtStore,
+    private val roleStore: RoleStore,
 ) : MealRepository {
 
     override suspend fun getMealByDate(date: LocalDate): Flow<Meal> {
