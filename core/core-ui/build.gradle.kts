@@ -29,6 +29,7 @@ android {
     }
     kotlinOptions { jvmTarget = AndroidConfig.KotlinOptions.JVM_TARGET }
     buildFeatures {
+        dataBinding = true
         viewBinding = true
         compose = true
     }
