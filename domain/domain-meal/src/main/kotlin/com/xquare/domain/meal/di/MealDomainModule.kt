@@ -1,5 +1,6 @@
 package com.xquare.domain.meal.di
 
+import com.xquare.common.project.baseUrl
 import com.xquare.domain.meal.datasource.database.MealDatabaseDataSource
 import com.xquare.domain.meal.datasource.database.MealDatabaseDataSourceImpl
 import com.xquare.domain.meal.datasource.datastore.MealDataStoreDataSource
@@ -28,7 +29,12 @@ private val dataSourceModule: Module
         single<MealDatabaseDataSource> { MealDatabaseDataSourceImpl(get()) }
         single<MealDataStoreDataSource> { MealDataStoreDataSourceImpl(get()) }
         single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
-        single<MealNetworkService> { MealNetworkServiceImpl(get()) }
+        single<MealNetworkService> {
+            MealNetworkServiceImpl(
+                httpClient = get(),
+                baseUri = "$baseUrl/meals",
+            )
+        }
     }
 
 private val useCaseModule: Module
