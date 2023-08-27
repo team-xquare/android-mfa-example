@@ -10,6 +10,10 @@ abstract class BaseViewModelActivity<B : ViewDataBinding, VM : BaseViewModel>(
     contentLayoutId = contentLayoutId,
 ) {
     protected abstract val viewModel: VM
+
+    /**
+     * can be null when not using data binding.
+     */
     protected open val viewModelId: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
