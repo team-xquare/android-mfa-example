@@ -9,8 +9,8 @@ abstract class BaseViewModelActivity<B : ViewDataBinding, VM : BaseViewModel>(
 ) : BaseActivity<B>(
     contentLayoutId = contentLayoutId,
 ) {
-    protected abstract val viewModelId: Int
     protected abstract val viewModel: VM
+    protected open val viewModelId: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,11 @@ abstract class BaseViewModelActivity<B : ViewDataBinding, VM : BaseViewModel>(
 
     override fun initViewDataBinding(savedInstanceState: Bundle?) {
         super.initViewDataBinding(savedInstanceState)
-        binding.run { setVariable(viewModelId, viewModel) }
+        binding.run {
+            if (viewModelId != null) {
+                setVariable(viewModelId!!, viewModel)
+            }
+        }
     }
 
     protected open fun registerViewModelDataCallBack() {}
