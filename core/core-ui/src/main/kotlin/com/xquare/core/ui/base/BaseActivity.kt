@@ -19,16 +19,17 @@ abstract class BaseActivity<B : ViewDataBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewDataBinding(savedInstanceState)
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.unbind()
     }
 
     private fun initViewDataBinding(savedInstanceState: Bundle?) {
         binding = DataBindingUtil.setContentView<B>(this@BaseActivity, contentLayoutId).apply {
             lifecycleOwner = this@BaseActivity
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        binding.unbind()
     }
 }
