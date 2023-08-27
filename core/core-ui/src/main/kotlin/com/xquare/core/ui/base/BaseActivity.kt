@@ -27,11 +27,11 @@ abstract class BaseActivity<B : ViewDataBinding>(
         binding.unbind()
     }
 
-    private fun initViewDataBinding(savedInstanceState: Bundle?) {
+    protected open fun initViewDataBinding(savedInstanceState: Bundle?) {
         binding = DataBindingUtil.setContentView<B>(this@BaseActivity, contentLayoutId).apply {
             lifecycleOwner = this@BaseActivity
         }
     }
 
-    protected fun initUi(savedInstanceState: Bundle?) {}
+    protected open fun initUi(savedInstanceState: Bundle?) {}
 }
