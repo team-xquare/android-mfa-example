@@ -19,7 +19,7 @@ abstract class BaseActivity<B : ViewDataBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewDataBinding(savedInstanceState)
-
+        initUi(savedInstanceState)
     }
 
     override fun onDestroy() {
@@ -32,4 +32,6 @@ abstract class BaseActivity<B : ViewDataBinding>(
             lifecycleOwner = this@BaseActivity
         }
     }
+
+    protected fun initUi(savedInstanceState: Bundle?) {}
 }
