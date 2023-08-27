@@ -3,7 +3,6 @@ package com.xquare.core.ui.util
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.xquare.core.ui.base.BaseFragment
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -52,4 +51,4 @@ internal class AutoClearedValue<T : Any>(
     }
 }
 
-internal fun <T : Any> BaseFragment<*>.autoCleared() = AutoClearedValue<T>(this)
+internal fun <T : Any> Fragment.autoCleared() = AutoClearedValue<T>(this)
