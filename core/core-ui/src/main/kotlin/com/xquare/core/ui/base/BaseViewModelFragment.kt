@@ -10,8 +10,12 @@ abstract class BaseViewModelFragment<B : ViewDataBinding, VM : BaseViewModel>(
 ) : BaseFragment<B>(
     contentLayoutId = contentLayoutId,
 ) {
-    protected abstract val viewModelId: Int
     protected abstract val viewModel: VM
+
+    /**
+     * can be null when not using data binding.
+     */
+    protected open val viewModelId: Int? = null
 
     override fun onViewCreated(
         view: View,
@@ -19,6 +23,15 @@ abstract class BaseViewModelFragment<B : ViewDataBinding, VM : BaseViewModel>(
     ) {
         super.onViewCreated(view, savedInstanceState)
         registerViewModelDataCallBack()
+    }
+
+    override fun initViewDataBinding(savedInstanceState: Bundle?) {
+        super.initViewDataBinding(savedInstanceState)
+        binding.run {
+            if (viewModelId != null) {
+                setVariable(viewModelId!!, viewModel)
+            }
+        }
     }
 
     protected open fun registerViewModelDataCallBack() {}
