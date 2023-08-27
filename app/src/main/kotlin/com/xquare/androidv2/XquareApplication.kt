@@ -1,6 +1,5 @@
 package com.xquare.androidv2
 
-import android.app.Application
 import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.flipper.plugins.databases.DatabasesFlipperPlugin
@@ -13,11 +12,12 @@ import com.facebook.soloader.SoLoader
 import com.google.android.material.color.DynamicColors
 import com.xquare.androidv2.di.xquareModule
 import com.xquare.common.project.isDebugEnabled
+import com.xquare.core.application.BaseApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
-internal class XquareApplication : Application() {
+internal class XquareApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
         initKoin()
