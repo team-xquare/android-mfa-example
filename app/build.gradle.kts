@@ -68,6 +68,7 @@ dependencies {
     implementation(project(":common:common-date"))
     implementation(project(":common:common-di"))
     implementation(project(":common:common-project"))
+    implementation(project(":core:core-application"))
     implementation(project(":core:core-database"))
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-jwt"))
