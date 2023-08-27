@@ -36,11 +36,11 @@ abstract class BaseFragment<B : ViewDataBinding>(
         initUi(savedInstanceState)
     }
 
-    protected fun initViewDataBinding(savedInstanceState: Bundle?) {
+    protected open fun initViewDataBinding(savedInstanceState: Bundle?) {
         binding.run {
             lifecycleOwner = this@BaseFragment
         }
     }
 
-    protected fun initUi(savedInstanceState: Bundle?) {}
+    protected open fun initUi(savedInstanceState: Bundle?) {}
 }
