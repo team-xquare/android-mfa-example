@@ -21,6 +21,6 @@ val databaseModule: Module
 
 // todo 분리 고민
 private val daoModule: Module
-    get() = module {
+    inline get() = module {
         single { get<XquareDatabase>().mealDao() }
     }
