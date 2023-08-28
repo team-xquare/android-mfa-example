@@ -1,7 +1,7 @@
 package com.xquare.androidv2.di
 
 import com.xquare.androidv2.BuildConfig
-import com.xquare.androidv2.RootViewModel
+import com.xquare.androidv2.RootActivityViewModel
 import com.xquare.common.di.DiQualifier
 import com.xquare.core.database.di.databaseModule
 import com.xquare.core.datastore.di.dataStoreModule
@@ -23,8 +23,8 @@ internal val xquareModule = module {
         httpModule,
     )
     single(qualifier = named(DiQualifier.Build.DEBUG)) { BuildConfig.DEBUG }
-    viewModel { RootViewModel() }
-    viewModelOf(::RootViewModel)
+    viewModel { RootActivityViewModel(get()) }
+    viewModelOf(::RootActivityViewModel)
 }
 
 private val coreModule: Module
