@@ -29,7 +29,7 @@ val mealDomainModule: Module
     }
 
 private val dataSourceModule: Module
-    get() = module {
+    inline get() = module {
         single<MealDatabaseDataSource> { MealDatabaseDataSourceImpl(get()) }
         single<MealDatabaseService> { MealDatabaseServiceImpl() }
 
@@ -46,5 +46,4 @@ private val dataSourceModule: Module
     }
 
 private val useCaseModule: Module
-    get() = module {
-    }
+    inline get() = module {}
