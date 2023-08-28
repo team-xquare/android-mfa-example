@@ -28,7 +28,7 @@ internal val xquareModule = module {
 }
 
 private val coreModule: Module
-    get() = module {
+    inline get() = module {
         includes(
             databaseModule,
             dataStoreModule,
@@ -39,7 +39,7 @@ private val coreModule: Module
     }
 
 private val domainModule: Module
-    get() = module {
+    inline get() = module {
         includes(
             mealDomainModule,
             userDomainModule,
