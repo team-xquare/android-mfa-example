@@ -7,9 +7,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val databaseModule: Module
-    get() = module {
-        // todo 분리 고민
-        includes(daoModule)
+    inline get() = module {
         single {
             Room.databaseBuilder(
                 context = androidApplication(),
