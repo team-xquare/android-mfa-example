@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/fragment_auth"
         android:name="com.xquare.feature.auth.AuthFragment"
+        android:label="@string/fragment_label_auth"
         tools:layout="@layout/fragment_auth" />
 
 </navigation>
