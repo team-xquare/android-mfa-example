@@ -1,7 +1,15 @@
 package com.xquare.core.ui.util
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 
 data class SystemBarsHeight(
     val statusBarHeight: Int,
@@ -48,3 +56,28 @@ val Context?.measuredSystemBarsHeight: SystemBarsHeight
         requireNotNull(this)
         return measureSystemBarsHeight(this)
     }
+
+fun Activity.removeSystemBars() {
+    WindowCompat.setDecorFitsSystemWindows(window, false)
+    window.apply {
+        setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+        )
+    }
+}
+
+fun Activity.addSystemBarsPaddingOnScreen(rootView: View) {
+    ViewCompat.setOnApplyWindowInsetsListener(rootView) { view, windowInsets ->
+        windowInsets.getInsets(WindowInsetsCompat.Type.systemBars()).let { insets ->
+            view.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                leftMargin = insets.left
+                bottomMargin = insets.bottom
+                rightMargin = insets.right
+                topMargin = insets.top
+            }
+        }
+
+        WindowInsetsCompat.CONSUMED
+    }
+}

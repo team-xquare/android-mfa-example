@@ -2,14 +2,12 @@ package com.xquare.androidv2
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.ViewGroup.MarginLayoutParams
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
 import com.xquare.androidv2.databinding.ActivityRootBinding
+import com.xquare.core.ui.base.BaseViewModel
+import com.xquare.core.ui.base.BaseViewModelActivity
+import com.xquare.core.ui.util.addSystemBarsPaddingOnScreen
+import com.xquare.core.ui.util.removeSystemBars
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 internal class RootActivity : AppCompatActivity() {
@@ -19,9 +17,10 @@ internal class RootActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        initSystemBars()
-        initEdgeToEdge()
+        removeSystemBars()
+        addSystemBarsPaddingOnScreen(binding.root)
     }
+}
 
     // todo move to utils
     private fun initSystemBars() {
