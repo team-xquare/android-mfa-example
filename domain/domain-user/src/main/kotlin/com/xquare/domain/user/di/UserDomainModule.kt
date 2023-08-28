@@ -30,7 +30,7 @@ val userDomainModule: Module
     }
 
 private val dataSourceModule: Module
-    get() = module {
+    inline get() = module {
         single<UserDatabaseDataSource> { UserDatabaseDataSourceImpl() }
         single<UserDatabaseService> { UserDatabaseServiceImpl() }
 
@@ -47,6 +47,6 @@ private val dataSourceModule: Module
     }
 
 private val useCaseModule: Module
-    get() = module {
+    inline get() = module {
         single { LoginUseCase(get()) }
     }
