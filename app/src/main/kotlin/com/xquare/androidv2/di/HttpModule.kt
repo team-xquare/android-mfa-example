@@ -8,7 +8,7 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 internal val httpModule: Module
-    get() = module {
+    inline get() = module {
         single(qualifier = named(DiQualifier.Http.BASE_URL)) {
             if (isDebugEnabled) {
                 BuildConfig.BASE_URL_STAG
