@@ -13,8 +13,9 @@ abstract class BaseActivity<B : ViewDataBinding>(
     @LayoutRes private val contentLayoutId: Int,
 ) : AppCompatActivity(contentLayoutId) {
 
-    protected lateinit var binding: B
-        private set
+    protected val binding: B by lazy {
+        DataBindingUtil.setContentView(this@BaseActivity, contentLayoutId)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,7 @@ abstract class BaseActivity<B : ViewDataBinding>(
     }
 
     protected open fun initViewDataBinding(savedInstanceState: Bundle?) {
-        binding = DataBindingUtil.setContentView<B>(this@BaseActivity, contentLayoutId).apply {
+        binding.apply {
             lifecycleOwner = this@BaseActivity
         }
     }
