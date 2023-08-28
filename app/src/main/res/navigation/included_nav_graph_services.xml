@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/fragment_services_main"
         android:name="com.xquare.androidv2.fragment.services.MainFragment"
+        android:label="@string/fragment_label_services_main"
         tools:layout="@layout/fragment_services_main" />
 
 </navigation>
