@@ -8,26 +8,31 @@
     <fragment
         android:id="@+id/fragment_services_main_home"
         android:name="com.xquare.feature.main.home.HomeFragment"
+        android:label="@string/fragment_label_services_main_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/fragment_services_main_application"
+        android:name="com.xquare.feature.main.application.ApplicationFragment"
+        android:label="@string/fragment_label_services_main_application"
+        tools:layout="@layout/fragment_application" />
 
     <fragment
         android:id="@+id/fragment_services_main_schedule"
         android:name="com.xquare.feature.main.schedule.ScheduleFragment"
+        android:label="@string/fragment_label_services_main_schedule"
         tools:layout="@layout/fragment_schedule" />
 
     <fragment
         android:id="@+id/fragment_services_main_feed"
         android:name="com.xqaure.feature.main.feed.FeedFragment"
+        android:label="@string/fragment_label_services_main_feed"
         tools:layout="@layout/fragment_feed" />
-
-    <fragment
-        android:id="@+id/fragment_services_main_application"
-        android:name="com.xquare.feature.main.application.ApplicationFragment"
-        tools:layout="@layout/fragment_application" />
 
     <fragment
         android:id="@+id/fragment_services_main_all_services"
         android:name="com.xquare.feature.allservices.AllServicesFragment"
+        android:label="@string/fragment_label_services_main_all_services"
         tools:layout="@layout/fragment_all_services" />
 
 </navigation>
