@@ -6,6 +6,6 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val dataStoreModule: Module
-    inline get() = module {
+    get() = module {
         single { androidApplication().preferencesDatastore }
     }
