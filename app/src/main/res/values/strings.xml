@@ -16,4 +16,13 @@
     <string name="feature_home">홈</string>
     <string name="feature_my_page">마이페이지</string>
     <string name="feature_schedule">일정</string>
+
+    <!--fragments label-->
+    <string name="fragment_label_auth">인증</string>
+    <string name="fragment_label_services_main">메인</string>
+    <string name="fragment_label_services_main_home">홈</string>
+    <string name="fragment_label_services_main_application">신청</string>
+    <string name="fragment_label_services_main_schedule">일정</string>
+    <string name="fragment_label_services_main_feed">피드</string>
+    <string name="fragment_label_services_main_all_services">전체</string>
 </resources>
